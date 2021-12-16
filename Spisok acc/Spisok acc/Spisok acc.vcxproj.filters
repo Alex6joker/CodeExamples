@@ -1,0 +1,213 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cc;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Resource Files">
+      <UniqueIdentifier>{67DA6AB6-F800-4c08-8B7A-83BB121AAD01}</UniqueIdentifier>
+      <Extensions>rc;ico;cur;bmp;dlg;rc2;rct;bin;rgs;gif;jpg;jpeg;jpe;resx;tiff;tif;png;wav</Extensions>
+    </Filter>
+    <Filter Include="Resource Files\Poisk_akk">
+      <UniqueIdentifier>{6482b64d-c5d8-4d7a-9f95-43cafc2186b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Chtenie">
+      <UniqueIdentifier>{6bb66404-0dd0-4d63-8f1f-64c9a341633e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Vvod_akk">
+      <UniqueIdentifier>{d8228f97-bbd1-4070-9c88-50b6f59d7d39}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Del_akk">
+      <UniqueIdentifier>{e0c7881f-71a6-48d2-a048-c7b815693d5e}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Change_akk">
+      <UniqueIdentifier>{d3535257-8fcb-4434-a5e2-3b54f185f406}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Empty_file">
+      <UniqueIdentifier>{74deedd4-c619-4b47-8c51-7c74cc4866c3}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Sortirovka">
+      <UniqueIdentifier>{5d1afedf-a584-44f2-9cb1-439e344c5caf}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Resource Files\Proverka_file">
+      <UniqueIdentifier>{239d9dfc-2ce1-4643-b2ec-df39b85c8779}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="files_size.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="gl_menu_vybor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="listing.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="menu_vybor.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="privetstvie.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="prov_probel.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="reset_files.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="vyvod.c">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="listing_vybor.c">
+      <Filter>Resource Files</Filter>
+    </ClCompile>
+    <ClCompile Include="frequency.c">
+      <Filter>Resource Files\Poisk_akk</Filter>
+    </ClCompile>
+    <ClCompile Include="gamma.c">
+      <Filter>Resource Files\Poisk_akk</Filter>
+    </ClCompile>
+    <ClCompile Include="name.c">
+      <Filter>Resource Files\Poisk_akk</Filter>
+    </ClCompile>
+    <ClCompile Include="osn_ton.c">
+      <Filter>Resource Files\Poisk_akk</Filter>
+    </ClCompile>
+    <ClCompile Include="Proverka_chisel.c">
+      <Filter>Resource Files\Poisk_akk</Filter>
+    </ClCompile>
+    <ClCompile Include="Proverka_slov.c">
+      <Filter>Resource Files\Poisk_akk</Filter>
+    </ClCompile>
+    <ClCompile Include="razr_name.c">
+      <Filter>Resource Files\Poisk_akk</Filter>
+    </ClCompile>
+    <ClCompile Include="stupen.c">
+      <Filter>Resource Files\Poisk_akk</Filter>
+    </ClCompile>
+    <ClCompile Include="tonal.c">
+      <Filter>Resource Files\Poisk_akk</Filter>
+    </ClCompile>
+    <ClCompile Include="chtenie_s_file_bemol.c">
+      <Filter>Resource Files\Chtenie</Filter>
+    </ClCompile>
+    <ClCompile Include="chtenie_s_file_diez.c">
+      <Filter>Resource Files\Chtenie</Filter>
+    </ClCompile>
+    <ClCompile Include="vvod_akk.c">
+      <Filter>Resource Files\Vvod_akk</Filter>
+    </ClCompile>
+    <ClCompile Include="vvod_akk_end.c">
+      <Filter>Resource Files\Vvod_akk</Filter>
+    </ClCompile>
+    <ClCompile Include="vvod_akk_start.c">
+      <Filter>Resource Files\Vvod_akk</Filter>
+    </ClCompile>
+    <ClCompile Include="vvod_bemol.c">
+      <Filter>Resource Files\Vvod_akk</Filter>
+    </ClCompile>
+    <ClCompile Include="vvod_diez.c">
+      <Filter>Resource Files\Vvod_akk</Filter>
+    </ClCompile>
+    <ClCompile Include="del_akk.c">
+      <Filter>Resource Files\Del_akk</Filter>
+    </ClCompile>
+    <ClCompile Include="del_niz_bemol.c">
+      <Filter>Resource Files\Del_akk</Filter>
+    </ClCompile>
+    <ClCompile Include="del_niz_diez.c">
+      <Filter>Resource Files\Del_akk</Filter>
+    </ClCompile>
+    <ClCompile Include="del_opred_bemol.c">
+      <Filter>Resource Files\Del_akk</Filter>
+    </ClCompile>
+    <ClCompile Include="del_opred_diez.c">
+      <Filter>Resource Files\Del_akk</Filter>
+    </ClCompile>
+    <ClCompile Include="del_verx_bemol.c">
+      <Filter>Resource Files\Del_akk</Filter>
+    </ClCompile>
+    <ClCompile Include="del_verx_diez.c">
+      <Filter>Resource Files\Del_akk</Filter>
+    </ClCompile>
+    <ClCompile Include="vyzov_bemol.c">
+      <Filter>Resource Files\Del_akk</Filter>
+    </ClCompile>
+    <ClCompile Include="vyzov_diez.c">
+      <Filter>Resource Files\Del_akk</Filter>
+    </ClCompile>
+    <ClCompile Include="change_akk.c">
+      <Filter>Resource Files\Change_akk</Filter>
+    </ClCompile>
+    <ClCompile Include="change_bemol.c">
+      <Filter>Resource Files\Change_akk</Filter>
+    </ClCompile>
+    <ClCompile Include="change_diez.c">
+      <Filter>Resource Files\Change_akk</Filter>
+    </ClCompile>
+    <ClCompile Include="vvod_empty_bemol.c">
+      <Filter>Resource Files\Empty_file</Filter>
+    </ClCompile>
+    <ClCompile Include="vvod_empty_diez.c">
+      <Filter>Resource Files\Empty_file</Filter>
+    </ClCompile>
+    <ClCompile Include="save_sort_bemol.c">
+      <Filter>Resource Files\Sortirovka</Filter>
+    </ClCompile>
+    <ClCompile Include="save_sort_diez.c">
+      <Filter>Resource Files\Sortirovka</Filter>
+    </ClCompile>
+    <ClCompile Include="sort_bemol_frequency.c">
+      <Filter>Resource Files\Sortirovka</Filter>
+    </ClCompile>
+    <ClCompile Include="sort_bemol_stupen.c">
+      <Filter>Resource Files\Sortirovka</Filter>
+    </ClCompile>
+    <ClCompile Include="sort_diez_frequency.c">
+      <Filter>Resource Files\Sortirovka</Filter>
+    </ClCompile>
+    <ClCompile Include="sort_diez_stupen.c">
+      <Filter>Resource Files\Sortirovka</Filter>
+    </ClCompile>
+    <ClCompile Include="sortirovka.c">
+      <Filter>Resource Files\Sortirovka</Filter>
+    </ClCompile>
+    <ClCompile Include="proverka_file.c">
+      <Filter>Resource Files\Proverka_file</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Change_akk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Create_struct_header.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Del_akk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Empty_file.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="head.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Poisk_akk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Sort_akk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="Vvod_akk.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+</Project>
