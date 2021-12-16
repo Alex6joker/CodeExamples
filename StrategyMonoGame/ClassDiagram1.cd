@@ -1,0 +1,241 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Strategy.cButton">
+    <Position X="6.25" Y="1.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AERAAACIAAQAgACgAAAAACAAAAAACAAABAAAABAAAIA=</HashCode>
+      <FileName>Buttons\cButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.ContinueButton">
+    <Position X="3.25" Y="6.5" Width="1.5" />
+    <Members>
+      <Method Name="Draw" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAQAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Buttons\ContinueButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.EndTurnButton">
+    <Position X="5.5" Y="6.5" Width="1.5" />
+    <Members>
+      <Method Name="Draw" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAQAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Buttons\EndTurnButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.ExitGameButton">
+    <Position X="7.75" Y="6.5" Width="1.5" />
+    <Members>
+      <Method Name="Draw" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAQAAgAAAAAAAAAAAAEAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Buttons\ExitGameButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.GridMapButton">
+    <Position X="10" Y="6.5" Width="1.5" />
+    <Members>
+      <Method Name="Draw" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAQAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Buttons\GridMapButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.ResultsTable">
+    <Position X="12.5" Y="6.5" Width="1.5" />
+    <Members>
+      <Method Name="Draw" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAQAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Buttons\ResultsTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.StartTheGameButton">
+    <Position X="1" Y="6.5" Width="1.5" />
+    <Members>
+      <Method Name="Draw" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AABAAAAAAAQAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Buttons\StartTheGameButton.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.City">
+    <Position X="34" Y="6" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAQACAAAAAgoAIIAAAAAUAAARACAAAgAAAAAIAIAQ=</HashCode>
+      <FileName>Cities\City.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.CityStorageMenu">
+    <Position X="37.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAEAEAAAAAgAAACAAAAAAAAAKAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Cities\CityStorageMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.Storage">
+    <Position X="37.25" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAQAAAAAAAAAIQAAAAAQAAAAAAAAAAAAAAAgQAgAA=</HashCode>
+      <FileName>Cities\Storage\Storage.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.EntryField">
+    <Position X="20.25" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQEAEAAAACAAgAhACAAAQAAIAoAAAAAAABAAAAAAAQ=</HashCode>
+      <FileName>EntryField.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.Game1">
+    <Position X="15" Y="1.25" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Strategy.Game1.GameState" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Game1.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>gB8GEEAAgAIAQwAAAkQCVEAAAgAAAiiHAAABYIQABwU=</HashCode>
+      <FileName>Game1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.LevelConditions">
+    <Position X="17" Y="4" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAgAAAAAAAAAEAAAECAAAAACAAABAAAIAAAAACA=</HashCode>
+      <FileName>LevelConditions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.LowLeftMenu">
+    <Position X="17" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABwAAEgIAAAAAgAABCAAgCAAKAAMQAAAkQAUAIAABCQ=</HashCode>
+      <FileName>LowLeftMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.Cells">
+    <Position X="30.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABQAACCIAACQEgAAABAAQKBgBBAAQABAACMBQQAAIBQ=</HashCode>
+      <FileName>Map\Cells\Cells.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.Map">
+    <Position X="28.25" Y="5.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQAAAAAAAAAIwgAAAAAYEIAAQICJAAAACAggAAAAAQ=</HashCode>
+      <FileName>Map\Map.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.Resource">
+    <Position X="33" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACAAAAQAgAgACAAAAQAAAAAAAgAAQAAAgAAIAQ=</HashCode>
+      <FileName>Resources\Resource.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.Technology">
+    <Position X="21" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAQAAEiAEIAAAwAgCAAAABAAAiAABAAQAAAAAAAAIAQ=</HashCode>
+      <FileName>TechnologiesTree\Technology.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.TechnologyTree">
+    <Position X="19" Y="1" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="Strategy.TechnologyTree.Branch" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>TechnologiesTree\TechnologyTree.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAZAAEAIAAAgUxJCADAAACIgAAQMAAAAAACQAAAAABQ=</HashCode>
+      <FileName>TechnologiesTree\TechnologyTree.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.TheBestOf_Table">
+    <Position X="18.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQEAEAAAgAAAgAAACASAAgAQAIAAGACAAQBABQAAAA=</HashCode>
+      <FileName>TheBestOf_Table.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.Timer">
+    <Position X="28.25" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAQAAAAAAAAAAgAoAAABAAAAAAAAAAAAAAAACAACQAA=</HashCode>
+      <FileName>Timer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.ImprovedWorker">
+    <Position X="1" Y="11" Width="1.5" />
+    <Members>
+      <Method Name="Draw" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAACAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Units\ImprovedWorker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.Settler">
+    <Position X="3.25" Y="10.75" Width="1.5" />
+    <Members>
+      <Method Name="Draw" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Units\Settler.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.Units">
+    <Position X="5.5" Y="10" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="Strategy.Units.UnitStates" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Units\Units.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAyAAASIAiDACgAgAAAQgCRwACEUBgAABAAAgARAIAo=</HashCode>
+      <FileName>Units\Units.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.Worker">
+    <Position X="1" Y="14.25" Width="1.5" />
+    <Members>
+      <Method Name="Draw" Hidden="true" />
+    </Members>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAQ=</HashCode>
+      <FileName>Units\Worker.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.UpStatisticsMenu">
+    <Position X="16.75" Y="9.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAIEAIAAAAAggAACAKACAAAAAIAAAEAQAAAEAggIQ=</HashCode>
+      <FileName>UpStatisticsMenu.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Strategy.Buildings">
+    <Position X="22.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAACABAAAAgAgAAgAAAEAAARAAAAAAgAAAAAAIAQ=</HashCode>
+      <FileName>Buildings.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
