@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{765A397C-6773-484E-A3F1-348A298BC618}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GPSSEmu</RootNamespace>
+    <AssemblyName>GPSSEmu</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BlocksTypeTextSplitter.cs" />
+    <Compile Include="CodeAnalyzer.cs" />
+    <Compile Include="EmulationStaticticsForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EmulationStaticticsForm.Designer.cs">
+      <DependentUpon>EmulationStaticticsForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Emulator\EmulationProcessor.cs" />
+    <Compile Include="Emulator\EmulatorMain.cs" />
+    <Compile Include="Emulator\GPSSBlocksCreatorChoser.cs" />
+    <Compile Include="Emulator\GPSSBlocksTableChoser.cs" />
+    <Compile Include="GPSSBlocksImplementaion\GPSSBlockADVANCE.cs" />
+    <Compile Include="GPSSBlocksImplementaion\GPSSBlockDEPART.cs" />
+    <Compile Include="GPSSBlocksImplementaion\GPSSBlockQUEUE.cs" />
+    <Compile Include="GPSSBlocksImplementaion\GPSSBlockRELEASE.cs" />
+    <Compile Include="GPSSBlocksImplementaion\GPSSBlockSEIZE.cs" />
+    <Compile Include="GPSSBlocksImplementaion\GPSSBlockGENERATE.cs" />
+    <Compile Include="GPSSBlocksImplementaion\GPSSBlockLabels.cs" />
+    <Compile Include="GPSSBlocksImplementaion\GPSSBlockMATCH.cs" />
+    <Compile Include="GPSSBlocksImplementaion\GPSSBlocks.cs" />
+    <Compile Include="GPSSBlocksImplementaion\GPSSBlockSIMULATE.cs" />
+    <Compile Include="GPSSBlocksImplementaion\GPSSBlockSTART.cs" />
+    <Compile Include="GPSSBlocksImplementaion\GPSSBlockSTORAGE.cs" />
+    <Compile Include="GPSSBlocksImplementaion\GPSSBlockTERMINATE.cs" />
+    <Compile Include="GPSSBlocksImplementaion\IRemoveTransaction.cs" />
+    <Compile Include="GPSSBlocksImplementaion\IStatisticRecalculation.cs" />
+    <Compile Include="GPSSBlocksImplementaion\ITransactGeneration.cs" />
+    <Compile Include="GPSSListOfBlocksGENERATE.cs" />
+    <Compile Include="GPSSListOfVariables.cs" />
+    <Compile Include="GPSSSourceCodeTable.cs" />
+    <Compile Include="MainWindowForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindowForm.Designer.cs">
+      <DependentUpon>MainWindowForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ParametersAsserter.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Tables\GPSSTable.cs" />
+    <Compile Include="Tables\Struct TableList_Number_Data.cs" />
+    <Compile Include="Tables\TableOfDevices.cs" />
+    <Compile Include="Tables\TableOfGENERATE.cs" />
+    <Compile Include="Tables\TableOfQUEUEs.cs" />
+    <Compile Include="Tables\TableOfSTART.cs" />
+    <Compile Include="Tables\TableOfSTORAGEs.cs" />
+    <Compile Include="Tables\TableOfVariables.cs" />
+    <Compile Include="Transact.cs" />
+    <EmbeddedResource Include="EmulationStaticticsForm.resx">
+      <DependentUpon>EmulationStaticticsForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindowForm.resx">
+      <DependentUpon>MainWindowForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
