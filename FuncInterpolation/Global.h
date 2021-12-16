@@ -14,8 +14,10 @@ extern const TColor DeCastejoColor;
 extern const TColor LinearColor;
 extern const TColor BgColor;
 extern const TColor GridColor;
+extern const TColor SelectColor;
 
 extern int CellSize;
 extern const int CountSplinePoint;
+extern int SearchRadius;
 //---------------------------------------------------------------------------
 #endif

@@ -30,7 +30,7 @@ void LagrangeInterpolation()
 			//Form1->Refresh();
 		}
 	}
-	Form1->Image1->Canvas->LineTo(StrToInt(Form1->StringGrid1->Cells[1][LineCount])*Zoom,StrToInt(Form1->StringGrid1->Cells[2][LineCount])*Zoom);
+	Form1->Image1->Canvas->LineTo(StrToInt(Form1->StringGrid1->Cells[1][LineCount-1])*Zoom,StrToInt(Form1->StringGrid1->Cells[2][LineCount-1])*Zoom);
 	delete[] tt;
 }
 

@@ -68,6 +68,14 @@ __published:	// IDE-managed Components
 	TImage *ImageDrag;
 	TPanel *PanelZoom;
 	TImage *ImageZoom;
+	TGroupBox *GroupBox1;
+	TPanel *PanelSetBg;
+	TImage *ImageBgUser;
+	TButton *Button7;
+	TButton *Button8;
+	TButton *Button9;
+	TOpenDialog *OpenDialog2;
+	TButton *Button10;
 	void __fastcall Image1Click(TObject *Sender);
 	void __fastcall Image1MouseMove(TObject *Sender, TShiftState Shift, int X, int Y);
 	void __fastcall Button1Click(TObject *Sender);
@@ -85,6 +93,15 @@ __published:	// IDE-managed Components
 	void __fastcall Image1MouseUp(TObject *Sender, TMouseButton Button, TShiftState Shift,
           int X, int Y);
 	void __fastcall ImageZoomClick(TObject *Sender);
+	void __fastcall Button8Click(TObject *Sender);
+	void __fastcall Button7Click(TObject *Sender);
+	void __fastcall StringGrid1SelectCell(TObject *Sender, int ACol, int ARow, bool &CanSelect);
+	void __fastcall StringGrid1SetEditText(TObject *Sender, int ACol, int ARow, const UnicodeString Value);
+	void __fastcall Button10Click(TObject *Sender);
+
+
+
+
 
 
 

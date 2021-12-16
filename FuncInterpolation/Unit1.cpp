@@ -5,6 +5,7 @@
 
 #include "Unit1.h"
 #include "Unit2.h"
+#include "Unit3.h"
 #include "Global.h"
 
 #include "DeCastelie.h"
@@ -35,21 +36,25 @@ int Mode = 0;
 	struct {
 		int X;
 		int Y;
-	} MousePos,GridMousePos;
+	} MousePos,BgOffset;
 
 	struct  {
 		int Width;
 		int Height;
 	} TrueSize;
 
-bool FlagDrag = 0;
+bool FlagDrag = false;
 bool FirstResize = true;
+bool BgActive = false;
 int DragIndex = 0;
+int LastSelectIndex = 0;
 
 //---------------------------------------------------------------------------
 __fastcall TForm1::TForm1(TComponent* Owner)
 	: TForm(Owner)
 {
+
+	BgOffset.X = BgOffset.Y = 0;
 	Form1->StringGrid1->Cells[0][0] = "N";
 	Form1->StringGrid1->Cells[1][0] = "X";
 	Form1->StringGrid1->Cells[2][0] = "Y";
@@ -85,8 +90,11 @@ __fastcall TForm1::TForm1(TComponent* Owner)
 void __fastcall TForm1::Image1Click(TObject *Sender)
 {
 	if(Mode == 0) {
+
+		MousePos.X = MousePos.X - BgOffset.X;
+		MousePos.Y = MousePos.Y - BgOffset.Y;
+		
 		AddDot(MousePos.X,MousePos.Y,clWhite,3);
-	//	AddDot(GridMousePos.X*CellSize,GridMousePos.Y*CellSize, clWhite,3);
 		Form1->StringGrid1->RowCount++;
 		DrawCurrentFunction();
 	}
@@ -100,8 +108,9 @@ void __fastcall TForm1::Image1Click(TObject *Sender)
 //---------------------------------------------------------------------------
 
 void DoZoom() {
-	Form1->Image1->Width = TrueSize.Width * Zoom;
-	Form1->Image1->Height = TrueSize.Height * Zoom;
+	
+	Form1->Image1->Width = Form1->ScrollBox1->Width * Zoom;
+	Form1->Image1->Height = Form1->ScrollBox1->Height * Zoom;
 
 	Form1->Image1->Picture = NULL;
 	DrawCurrentFunction();
@@ -114,10 +123,14 @@ void DrawGrid() {
 	int Cell = CellSize*Zoom;
 
 	Form1->Image1->Canvas->Pen->Width = 1;
-	//Заполняем рабочую область одним цветом
-	Form1->Image1->Canvas->Brush->Color = BgColor;
-	Form1->Image1->Canvas->Rectangle(0,0,Form1->Image1->Width+1,Form1->Image1->Height+1);
-
+	//Заполняем рабочую область одним цветом или фоном
+	if(BgActive) {
+		Form1->Image1->Picture = Form1->ImageBgUser->Picture;
+	} else {
+		Form1->Image1->Canvas->Brush->Color = BgColor;
+		Form1->Image1->Canvas->Rectangle(0,0,Form1->Image1->Width+1,Form1->Image1->Height+1);
+	}
+	
 	//Сетка
 	Form1->Image1->Canvas->Pen->Color = GridColor;
 	for(int i = 0; i < Form1->Image1->Height/Cell+1; i++) {
@@ -155,7 +168,6 @@ void AddDot(int X, int Y, TColor Color, int R) {
 }
 
 void DrawAllDots() {
-	Form1->Image1->Canvas->Pen->Width = 2;
 	for(int i = 1; i < Form1->StringGrid1->RowCount; i++) {
 		AddDot(StrToInt(Form1->StringGrid1->Cells[1][i]),StrToInt(Form1->StringGrid1->Cells[2][i]),clWhite, 3);
 	}
@@ -167,12 +179,9 @@ void __fastcall TForm1::Image1MouseMove(TObject *Sender, TShiftState Shift, int 
 	MousePos.X = X/Zoom;
 	MousePos.Y = Y/Zoom;
 
-	GridMousePos.X = MousePos.X/CellSize;
-	GridMousePos.Y = MousePos.Y/CellSize;
-
-	//Выделить текущую точку в таблице
-	int Index = NearDot(10);
+	int Index = NearDot(SearchRadius);
 	if(Index != -1) {
+		//Выделить текущую точку в таблице
 		Form1->StringGrid1->Row = Index;
 		Form1->StringGrid1->Col = 0;
 		TGridRect myRect;
@@ -181,6 +190,23 @@ void __fastcall TForm1::Image1MouseMove(TObject *Sender, TShiftState Shift, int 
 		myRect.Right = 0;
 		myRect.Bottom = Index;
 		Form1->StringGrid1->Selection = myRect;
+		DrawAllDots();
+		Form1->Image1->Canvas->Pen->Color = SelectColor;
+		Form1->Image1->Canvas->Brush->Color = SelectColor;
+		Form1->Image1->Canvas->Ellipse(
+			Form1->StringGrid1->Cells[1][Index]*Zoom-3,
+			Form1->StringGrid1->Cells[2][Index]*Zoom-3,
+			Form1->StringGrid1->Cells[1][Index]*Zoom+3,
+			Form1->StringGrid1->Cells[2][Index]*Zoom+3
+		);
+	} else {
+			TGridRect myRect;
+			myRect.Left = 2;
+			myRect.Top = 0;
+			myRect.Right = 0;
+			myRect.Bottom = 0;
+			Form1->StringGrid1->Selection = myRect;
+			DrawAllDots();
 	}
 
 	//Если включен режим перемещения то выполнить его
@@ -190,7 +216,7 @@ void __fastcall TForm1::Image1MouseMove(TObject *Sender, TShiftState Shift, int 
 		DrawCurrentFunction();
 	}
 
-	Form1->Label3->Caption = IntToStr(MousePos.X) + "/" + IntToStr(MousePos.Y);
+	Form1->Label3->Caption = IntToStr(MousePos.X - BgOffset.X) + "/" + IntToStr(MousePos.Y - BgOffset.Y);
 }
 //---------------------------------------------------------------------------
 
@@ -281,13 +307,15 @@ void __fastcall TForm1::ImageOpenClick(TObject *Sender)
 	//Если был выбран файл
 	if(Execute) {
 		//Стираем все уже имеющиеся точки с экрана и из таблицы
-		for(int i=1; i < Form1->StringGrid1->RowCount; i++)
-			Form1->StringGrid1->Rows[i]->Clear();
-		Form1->StringGrid1->RowCount = 1;
-        DrawGrid();
+        Clear();
+
 		Memo->Lines->LoadFromFile(Form1->OpenDialog1->FileName);
 
-		for(int i = 0; i < Memo->Lines->Count; i++) {
+		int DotCount = StrToInt(Memo->Lines->Strings[0]);
+
+
+		// Загружаем все точки
+		for(int i = 1; i < DotCount+1; i++) {
 			int Pos = 0; //Номер столбца в который будет записана информация
 			AnsiString Line = Memo->Lines->Strings[i];
 			AnsiString SubStr = "";
@@ -295,7 +323,7 @@ void __fastcall TForm1::ImageOpenClick(TObject *Sender)
 			for(int j = 1; j < Line.Length()+1; j++) {
 				if(Line[j] == '\t' || j == Line.Length()) {
 						if(Pos == 2) SubStr = SubStr + Line[j];
-						Form1->StringGrid1->Cells[Pos][i+1] = SubStr;
+						Form1->StringGrid1->Cells[Pos][i] = SubStr;
 						SubStr = "";
 						Pos++;
 				} else {
@@ -303,6 +331,17 @@ void __fastcall TForm1::ImageOpenClick(TObject *Sender)
 				}
 			}
 		}
+		//Загружаем все активные графики
+		for(int i = DotCount+1; i < Memo->Lines->Count; i++) {
+			AnsiString Line = Memo->Lines->Strings[i];
+			if(CompareStr(Line,"1") == 0) Form1->Button1->Click();
+			if(CompareStr(Line,"2") == 0) Form1->Button2->Click();
+			if(CompareStr(Line,"3") == 0) Form1->Button3->Click();
+			if(CompareStr(Line,"4") == 0) Form1->Button4->Click();
+			if(CompareStr(Line,"5") == 0) Form1->Button5->Click();
+			if(CompareStr(Line,"6") == 0) Form1->Button6->Click();
+		}
+		DrawCurrentFunction();
 	}
 	DrawAllDots();
 	Memo->Free();
@@ -316,13 +355,36 @@ void __fastcall TForm1::ImageSaveClick(TObject *Sender)
 	Memo->Visible = false;
 	BOOL Execute = Form1->SaveDialog1->Execute();
 	if(Execute) {
+	//Сохраняем количество точек
+		Memo->Lines->Add(Form1->StringGrid1->RowCount-1);
+	// Сохраняем все точки
 		for(int i = 1; i< Form1->StringGrid1->RowCount; i++) {
 			Memo->Lines->Add(
 				Form1->StringGrid1->Cells[0][i] + "\t" +
 				Form1->StringGrid1->Cells[1][i] + "\t" +
 				Form1->StringGrid1->Cells[2][i]
 			);
-        }
+		}
+		// Сохраняем активные графики
+		if(!Button1->Enabled) {
+			Memo->Lines->Add(1);
+		}
+		if(!Button2->Enabled) {
+			Memo->Lines->Add(2);
+		}
+		if(!Button3->Enabled) {
+			Memo->Lines->Add(3);
+		}
+		if(!Button4->Enabled) {
+			Memo->Lines->Add(4);
+		}
+		if(!Button5->Enabled) {
+			Memo->Lines->Add(5);
+		}
+		if(!Button6->Enabled) {
+			Memo->Lines->Add(6);
+		}
+
 		Memo->Lines->SaveToFile(Form1->SaveDialog1->FileName);
 	}
 }
@@ -356,7 +418,7 @@ int NearDot(int SearchRadius) {
 }
 
 void DeleteDot() {
-	int Index = NearDot(10);
+	int Index = NearDot(SearchRadius);
 	if(Index != -1) {
 		for(int i = Index; i < Form1->StringGrid1->RowCount-1; i++) {
 			Form1->StringGrid1->Cells[1][i] = Form1->StringGrid1->Cells[1][i+1];
@@ -402,6 +464,7 @@ if(Mode == 0 || Mode == 1)
 void DrawCurrentFunction() {
 	DrawGrid();
 	DrawAllDots();
+	Form1->Image1->Canvas->Pen->Width = 2;
 	if(Form1->Cancel1->Visible == true) {
 		LinearInterpolation();
 	}
@@ -453,9 +516,6 @@ void __fastcall TForm1::FormResize(TObject *Sender)
 		Form1->Image1->Width = Form1->ScrollBox1->Width;
 		Form1->Image1->Height = Form1->ScrollBox1->Height;
 
-		TrueSize.Width = Form1->Image1->Width;
-		TrueSize.Height = Form1->Image1->Height;
-
 		DrawGrid();
 		DrawAllDots();
 	}
@@ -504,6 +564,9 @@ void __fastcall TForm1::Cancel1Click(TObject *Sender)
 
 void __fastcall TForm1::ImageMoveClick(TObject *Sender)
 {
+	ImageMove->AlignWithMargins = true;
+	ImageDrag->AlignWithMargins = false;
+	ImageZoom->AlignWithMargins = false;
 	Mode = 0;
 	Form1->PanelMove->BevelOuter = TBevelCut::bvLowered;
 	Form1->PanelDrag->BevelOuter = TBevelCut::bvRaised;
@@ -514,6 +577,9 @@ void __fastcall TForm1::ImageMoveClick(TObject *Sender)
 
 void __fastcall TForm1::ImageDragClick(TObject *Sender)
 {
+	ImageMove->AlignWithMargins = false;
+	ImageDrag->AlignWithMargins = true;
+	ImageZoom->AlignWithMargins = false;
 	Mode = 1;
 	Form1->PanelMove->BevelOuter = TBevelCut::bvRaised;
 	Form1->PanelDrag->BevelOuter = TBevelCut::bvLowered;
@@ -524,6 +590,9 @@ void __fastcall TForm1::ImageDragClick(TObject *Sender)
 
 void __fastcall TForm1::ImageZoomClick(TObject *Sender)
 {
+	ImageMove->AlignWithMargins = false;
+	ImageDrag->AlignWithMargins = false;
+	ImageZoom->AlignWithMargins = true;
 	Mode = 2;
 	Form1->PanelMove->BevelOuter = TBevelCut::bvRaised;
 	Form1->PanelDrag->BevelOuter = TBevelCut::bvRaised;
@@ -536,7 +605,7 @@ void __fastcall TForm1::Image1MouseDown(TObject *Sender, TMouseButton Button, TS
           int X, int Y)
 {
 	if(Mode == 1) {
-		int Index = NearDot(10);
+		int Index = NearDot(SearchRadius);
 		if(Index != -1) {
 			FlagDrag = true;
 			DragIndex = Index;
@@ -553,4 +622,106 @@ if(Mode == 1)
 }
 //---------------------------------------------------------------------------
 
+void __fastcall TForm1::Button8Click(TObject *Sender)
+{
+	BOOL Execute = Form1->OpenDialog2->Execute();
+	//Если был выбран файл
+	if(Execute) {
+
+		ImageBgUser->Visible = true;
+		Button9->Visible = true;
+		Button7->Visible = true;
+		Button8->Visible = false;
+		Form1->ImageBgUser->Picture->LoadFromFile(Form1->OpenDialog2->FileName);
+		if(Form1->ImageBgUser->Picture->Width > Form1->Image1->Width ||
+		Form1->ImageBgUser->Picture->Height > Form1->Image1->Height)
+		{
+			Form1->Button7->Click();
+			Form2->Label1->Caption = "Изображение слишком большое. Загрузите другое.";
+			Form2->ShowModal();
+		}
+		else {
+			Form1->Image1->Picture = Form1->ImageBgUser->Picture;
+
+			Form1->ImageMoveClick(NULL);
+			Form1->ImageZoom->Enabled = false;
+
+			BgActive = true;
+
+			BgOffset.X = (Form1->Image1->Width - Form1->Image1->Picture->Width)/2;
+			BgOffset.Y = (Form1->Image1->Height - Form1->Image1->Picture->Height)/2;
+
+			DrawGrid();
+			DrawAllDots();
+			DrawCurrentFunction();
+		}
+	}
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button7Click(TObject *Sender)
+{
+	Button8->Visible = true;
+	Button7->Visible = false;
+	Button9->Visible = false;
+	ImageBgUser->Visible = false;
+
+	BgActive = false;
+
+	Form1->ImageZoom->Enabled = true;
+
+	BgOffset.X = BgOffset.Y = 0;
+
+	Form1->Image1->Picture = NULL;
+
+	Form1->Image1->Width = Form1->ScrollBox1->Width;
+	Form1->Image1->Height = Form1->ScrollBox1->Height;
+
+	DrawGrid();
+	DrawAllDots();
+	DrawCurrentFunction();
+}
+//---------------------------------------------------------------------------
+
+
+
+
+
+void __fastcall TForm1::StringGrid1SelectCell(TObject *Sender, int ACol, int ARow,
+          bool &CanSelect)
+{
+	if(ARow != 0) {
+	DrawAllDots();
+	Form1->Image1->Canvas->Pen->Color = SelectColor;
+		Form1->Image1->Canvas->Brush->Color = SelectColor;
+		Form1->Image1->Canvas->Ellipse(
+			Form1->StringGrid1->Cells[1][ARow]*Zoom-3,
+			Form1->StringGrid1->Cells[2][ARow]*Zoom-3,
+			Form1->StringGrid1->Cells[1][ARow]*Zoom+3,
+			Form1->StringGrid1->Cells[2][ARow]*Zoom+3
+		);
+    }
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm1::StringGrid1SetEditText(TObject *Sender, int ACol, int ARow,
+          const UnicodeString Value)
+{
+//	if(Value != "") {
+//		DrawGrid();
+//		DrawAllDots();
+//		DrawCurrentFunction();
+//	} else {
+//		Form1->StringGrid1->Cells[ACol][ARow] = "";
+//	}
+}
+//---------------------------------------------------------------------------
+
+
+void __fastcall TForm1::Button10Click(TObject *Sender)
+{
+    Form3->ShowModal();
+}
+//---------------------------------------------------------------------------
 
