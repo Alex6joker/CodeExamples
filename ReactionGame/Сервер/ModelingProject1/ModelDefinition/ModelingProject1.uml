@@ -1,0 +1,481 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<modelStoreModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner"
+  dslVersion="1.0.0.0"
+  Id="7003278a-3b0c-43fc-97c2-ae1d1a1c3ccf"
+  name="ModelingProject1" xmlns="http://schemas.microsoft.com/dsltools/ModelStore">
+  <profileInstances>
+    <packageHasProfileInstances
+      Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b">
+      <profileInstance
+        Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791"
+        name="StandardProfileL2" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances
+      Id="29349502-908c-4fda-9054-c48619c59ed0">
+      <profileInstance
+        Id="532ea607-fb19-44b8-8502-3351b05452be"
+        name="StandardProfileL3" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <packageHasNamedElement>
+      <actor
+        Id="0dbc92cb-2e6b-4180-8551-ee90f7b5cb42"
+        name="Пользователь"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="62d1beb0-eab8-40a9-9812-f7fceef59326"
+        name="Выбор IP"
+        isAbstract="false"
+        isLeaf="false">
+        <targetEnds>
+          <association
+            Id="e31d6bb3-afc1-4adb-84cd-7dadf0b0f7b1"
+            isDerived="false"
+            sourceEndRoleName="Выбор IP"
+            targetEndRoleName="Выбор кол-ва мишеней"
+            isLeaf="false"
+            isAbstract="false">
+            <useCaseMoniker
+              Id="70cc80f6-a73f-4b8f-8426-4882a8278b63"
+              LastKnownName="Выбор кол-ва мишеней"
+              LastKnownLocation="ModelingProject1.uml" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="cc4d60db-f20a-47cd-a89c-622c32237f39"
+                  name="Выбор IP"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false"
+                  isNavigableOwned="false" />
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd
+                  Id="76978d2e-6f7e-46a3-958b-f81e56071304"
+                  name="Выбор кол-ва мишеней"
+                  isLeaf="false"
+                  isStatic="false"
+                  isReadOnly="false"
+                  isDerived="false"
+                  isDerivedUnion="false"
+                  aggregation="None"
+                  isComposite="false" />
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+          </association>
+        </targetEnds>
+      </useCase>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="70cc80f6-a73f-4b8f-8426-4882a8278b63"
+        name="Выбор кол-ва мишеней"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <useCase
+        Id="56b64922-351d-4649-9f85-e66d4d1c78e5"
+        name="UseCase1"
+        isAbstract="false"
+        isLeaf="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="034206db-1a5e-484d-a796-b3dad84819fe"
+        name="Form1"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="49054c24-db1f-4a9b-b87a-3d4481160521">
+            <classMoniker
+              Id="32ed3638-ad81-41c0-b3d0-351b70f428ee"
+              LastKnownName="Socket"
+              LastKnownLocation="ModelingProject1.uml" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="a94ac673-76fc-4281-a3c3-b1ac6a0f172d"
+            isSubstitutable="false">
+            <classMoniker
+              Id="3c3ad079-37f0-45e8-9bc1-9b375d38b647"
+              LastKnownName="Form"
+              LastKnownLocation="ModelingProject1.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="d27898a0-1eb3-4048-b81f-ff1a4b8d3ba0"
+            name="ClientSocket"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="9a27cae2-b66d-4562-abe5-fe25ff5f2d21"
+            name="button1_Click"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="388372d4-139b-40ab-8323-e58faf341377"
+        name="Form2"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="38327e26-8390-4e3c-a10a-dc9c8ba8f99a">
+            <classMoniker
+              Id="c8dbb9d5-7b1e-4f9e-94b4-d8d0b9aaf8d1"
+              LastKnownName="Encoding"
+              LastKnownLocation="ModelingProject1.uml" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization
+            Id="9d40f32b-89c0-4d46-a671-f0e51925ff63"
+            isSubstitutable="false">
+            <classMoniker
+              Id="3c3ad079-37f0-45e8-9bc1-9b375d38b647"
+              LastKnownName="Form"
+              LastKnownLocation="ModelingProject1.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="2211c3f3-0796-4792-806d-26ad93b1007c"
+            name="DEFAULT_BUFFER"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="adb2443e-e13d-495a-9693-7ce643884b6e"
+            name="button1_Click"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="0e5c0714-9beb-4db9-9cb6-64c54e267ce2"
+        name="Form3"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <generalsInternal>
+          <generalization
+            Id="39e85fec-2a41-462f-99aa-1eed1e678e4e"
+            isSubstitutable="false">
+            <classMoniker
+              Id="3c3ad079-37f0-45e8-9bc1-9b375d38b647"
+              LastKnownName="Form"
+              LastKnownLocation="ModelingProject1.uml" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property
+            Id="7bb93520-2816-4930-b01e-d30f27261171"
+            name="img"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="0a0f9d2d-6ebc-4014-941c-8f8aa458ecb5"
+            name="TargetsCount"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+          <property
+            Id="b189b697-1ff7-49b9-a7ee-67b30d58bb9a"
+            name="Coordinates"
+            isLeaf="false"
+            isStatic="false"
+            isReadOnly="false"
+            isUnique="false"
+            isDerived="false"
+            isDerivedUnion="false"
+            aggregation="None"
+            isComposite="false" />
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation
+            Id="7604f9be-2392-4e96-8583-68baee435b4d"
+            name="pictureBox1_Click"
+            isLeaf="false"
+            isStatic="false"
+            isAbstract="false"
+            concurrency="Sequential"
+            isQuery="false" />
+        </ownedOperationsInternal>
+      </class>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="3c3ad079-37f0-45e8-9bc1-9b375d38b647"
+        name="Form"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="32ed3638-ad81-41c0-b3d0-351b70f428ee"
+        name="Socket"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <class
+        Id="c8dbb9d5-7b1e-4f9e-94b4-d8d0b9aaf8d1"
+        name="Encoding"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="d15004a9-7e37-42d3-822e-2af620517fcd"
+        name="Сервер.exe"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="1b84c4fa-b3dd-41dc-8aef-70e4910b63ac">
+            <componentMoniker
+              Id="77fd6a73-5234-4cfc-9115-fbdff2ffa2e8"
+              LastKnownName="StartServer.cpp"
+              LastKnownLocation="ModelingProject1.uml" />
+          </dependency>
+          <dependency
+            Id="7e3cea46-a298-4172-a55b-4694fad10401">
+            <componentMoniker
+              Id="2caa88df-3dc5-4afa-8bdf-cad682af1774"
+              LastKnownName="Globals.cpp"
+              LastKnownLocation="ModelingProject1.uml" />
+          </dependency>
+          <dependency
+            Id="437d109a-6565-4f56-81da-7ab84a9bbacb">
+            <componentMoniker
+              Id="2bad0538-d736-4e5b-a034-ff780cc274d7"
+              LastKnownName="AllReady.cpp"
+              LastKnownLocation="ModelingProject1.uml" />
+          </dependency>
+          <dependency
+            Id="66485465-547e-4134-9066-a2407111b516">
+            <componentMoniker
+              Id="a61d5eb4-930f-4b74-9504-b494b08ec375"
+              LastKnownName="WorkWithClientMessage.cpp"
+              LastKnownLocation="ModelingProject1.uml" />
+          </dependency>
+          <dependency
+            Id="f3d8e670-c53b-4171-a0c5-7c39db72262f">
+            <componentMoniker
+              Id="ecd89872-1cd4-45d5-b973-5651a7e3f053"
+              LastKnownName="WinSockConnect.cpp"
+              LastKnownLocation="ModelingProject1.uml" />
+          </dependency>
+          <dependency
+            Id="ba17e6f2-e7fe-48f6-b351-d05a68295d0c">
+            <componentMoniker
+              Id="03651867-e193-4049-ae6c-935bdc6b4931"
+              LastKnownName="WaitNewClients.cpp"
+              LastKnownLocation="ModelingProject1.uml" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="77fd6a73-5234-4cfc-9115-fbdff2ffa2e8"
+        name="StartServer.cpp"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="2caa88df-3dc5-4afa-8bdf-cad682af1774"
+        name="Globals.cpp"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="2bad0538-d736-4e5b-a034-ff780cc274d7"
+        name="AllReady.cpp"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="ecd89872-1cd4-45d5-b973-5651a7e3f053"
+        name="WinSockConnect.cpp"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="03651867-e193-4049-ae6c-935bdc6b4931"
+        name="WaitNewClients.cpp"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="a61d5eb4-930f-4b74-9504-b494b08ec375"
+        name="WorkWithClientMessage.cpp"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false" />
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="b380408a-730d-4fd3-97e7-3c10a19fed36"
+        name="Main.h"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="8167edcc-ad40-42df-a248-213b779ca64a">
+            <componentMoniker
+              Id="2bad0538-d736-4e5b-a034-ff780cc274d7"
+              LastKnownName="AllReady.cpp"
+              LastKnownLocation="ModelingProject1.uml" />
+          </dependency>
+          <dependency
+            Id="19c429d7-2259-4682-ada7-d5d4ac7723a2">
+            <componentMoniker
+              Id="77fd6a73-5234-4cfc-9115-fbdff2ffa2e8"
+              LastKnownName="StartServer.cpp"
+              LastKnownLocation="ModelingProject1.uml" />
+          </dependency>
+          <dependency
+            Id="bfa13243-aecd-4511-9771-7cf2bcc73418">
+            <componentMoniker
+              Id="03651867-e193-4049-ae6c-935bdc6b4931"
+              LastKnownName="WaitNewClients.cpp"
+              LastKnownLocation="ModelingProject1.uml" />
+          </dependency>
+          <dependency
+            Id="c164cda2-7249-4c9f-aa07-332f9f9b27b0">
+            <componentMoniker
+              Id="a61d5eb4-930f-4b74-9504-b494b08ec375"
+              LastKnownName="WorkWithClientMessage.cpp"
+              LastKnownLocation="ModelingProject1.uml" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </packageHasNamedElement>
+    <packageHasNamedElement>
+      <component
+        Id="996e4b89-2c7b-4af0-8e4f-4125641b2a6d"
+        name="Globals.h"
+        isAbstract="false"
+        isLeaf="false"
+        isActiveClass="false">
+        <suppliersInternal>
+          <dependency
+            Id="a3af82dd-d7e3-4ce6-ac7b-64c42ea8ce9b">
+            <componentMoniker
+              Id="77fd6a73-5234-4cfc-9115-fbdff2ffa2e8"
+              LastKnownName="StartServer.cpp"
+              LastKnownLocation="ModelingProject1.uml" />
+          </dependency>
+          <dependency
+            Id="8ed7292e-4cef-45a2-98e0-002ac29366bf">
+            <componentMoniker
+              Id="2bad0538-d736-4e5b-a034-ff780cc274d7"
+              LastKnownName="AllReady.cpp"
+              LastKnownLocation="ModelingProject1.uml" />
+          </dependency>
+          <dependency
+            Id="6301a0fe-1f4a-4c85-8fdc-235a74ce9177">
+            <componentMoniker
+              Id="a61d5eb4-930f-4b74-9504-b494b08ec375"
+              LastKnownName="WorkWithClientMessage.cpp"
+              LastKnownLocation="ModelingProject1.uml" />
+          </dependency>
+          <dependency
+            Id="9f767a85-9afa-41b2-b710-f627af0bd41e">
+            <componentMoniker
+              Id="03651867-e193-4049-ae6c-935bdc6b4931"
+              LastKnownName="WaitNewClients.cpp"
+              LastKnownLocation="ModelingProject1.uml" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </packageHasNamedElement>
+  </packagedElements>
+  <primitiveType
+    Id="220a3521-e091-4221-bae9-3ef9018e845c"
+    name="Integer"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="8943dc84-709e-4f62-b15a-a3273aa6f165"
+    name="Boolean"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="59259974-6d55-42c6-b7bd-763d77ac8ef9"
+    name="String"
+    isAbstract="false"
+    isLeaf="false" />
+  <primitiveType
+    Id="3ab42e7d-4969-445a-b209-471f5cb8209c"
+    name="UnlimitedNatural"
+    isAbstract="false"
+    isLeaf="false" />
+</modelStoreModel>

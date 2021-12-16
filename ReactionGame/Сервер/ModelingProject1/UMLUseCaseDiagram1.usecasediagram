@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" dslVersion="1.0.0.0" Id="46ad6aa5-a4c9-45e6-9a55-80edf4049be1" name="UMLUseCaseDiagram1" linkedPackageId="a0075c32-3530-4249-80c3-2876296db579" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <profileInstances>
+    <packageHasProfileInstances Id="3478b944-a91b-440a-a1bd-81d76afd30d7">
+      <profileInstance Id="90833c85-e344-45b7-a398-311592d1c110" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="3b28eb47-b30b-4845-aed4-2cb299de004e">
+      <profileInstance Id="fd015eef-b2a2-43d8-95f4-8b81771b9d2a" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="5cb3a634-e7e5-4db8-becb-7367074253eb" name="Пользователь" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="0dbc92cb-2e6b-4180-8551-ee90f7b5cb42" />
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="f197845a-645a-4415-83e6-6a17e8e52fe8" name="Выбор IP" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="62d1beb0-eab8-40a9-9812-f7fceef59326" />
+        <targetEnds>
+          <association Id="be3b0314-0558-4f3d-b231-dc5520fda4a4" isDerived="false" sourceEndRoleName="Выбор IP" targetEndRoleName="Выбор кол-ва мишеней" isLeaf="false" isAbstract="false">
+            <useCaseMoniker Id="2e79b11f-dfc0-402d-aec3-5de78d8cc797" LastKnownName="Выбор кол-ва мишеней" />
+            <relationshipOwnedElementsInternal>
+              <associationHasOwnedEnds>
+                <memberEnd Id="ad09a7ef-8358-4b57-b5c5-a93cc9df8898" name="Выбор IP" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false" isNavigableOwned="false">
+                  <elementDefinition Id="cc4d60db-f20a-47cd-a89c-622c32237f39" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+              <associationHasOwnedEnds>
+                <memberEnd Id="32a7573f-b5ac-4e9f-9134-39b294f7bc2a" name="Выбор кол-ва мишеней" isLeaf="false" isStatic="false" isReadOnly="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+                  <elementDefinition Id="76978d2e-6f7e-46a3-958b-f81e56071304" />
+                </memberEnd>
+              </associationHasOwnedEnds>
+            </relationshipOwnedElementsInternal>
+            <elementDefinition Id="e31d6bb3-afc1-4adb-84cd-7dadf0b0f7b1" />
+          </association>
+        </targetEnds>
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="2e79b11f-dfc0-402d-aec3-5de78d8cc797" name="Выбор кол-ва мишеней" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="70cc80f6-a73f-4b8f-8426-4882a8278b63" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="a0075c32-3530-4249-80c3-2876296db579" name="ModelingProject1">
+    <elementDefinition Id="7003278a-3b0c-43fc-97c2-ae1d1a1c3ccf" />
+  </package>
+</useCaseModelRoot>

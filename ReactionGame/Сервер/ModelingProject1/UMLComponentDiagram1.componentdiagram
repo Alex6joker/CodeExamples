@@ -1,0 +1,129 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/LogicalClassDesigner" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm12="http://schemas.microsoft.com/dsltools/UseCaseModel" dslVersion="1.0.0.0" Id="bd5c0498-1e74-4414-b11b-6fbb8b2957c7" name="UMLComponentDiagram1" linkedPackageId="ec22faa1-49df-4395-92ac-196eb63aa8e2" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="8757ebe8-6fd9-4142-92f8-cb9989577311">
+      <profileInstance Id="5a756024-2691-4e14-aadb-02c6694e2c2b" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="63aa286a-bfa0-4856-9164-da83b4b2281d">
+      <profileInstance Id="833cb106-f729-4569-b4a8-9b5cde3a85b1" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="d7999166-ca49-4f92-8065-3597d08beb86" name="Сервер.exe" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="d15004a9-7e37-42d3-822e-2af620517fcd" />
+        <suppliersInternal>
+          <dependency Id="68ea9b61-4052-4c1a-bb7b-00048b78a887">
+            <componentMoniker Id="5a9229fb-e226-4582-af4f-4e44d78f1d82" LastKnownName="StartServer.cpp" />
+            <elementDefinition Id="1b84c4fa-b3dd-41dc-8aef-70e4910b63ac" />
+          </dependency>
+          <dependency Id="e4247368-4267-479d-940e-0f9a75958511">
+            <componentMoniker Id="b92055a8-8836-406f-bd2b-42317fa5690d" LastKnownName="Globals.cpp" />
+            <elementDefinition Id="7e3cea46-a298-4172-a55b-4694fad10401" />
+          </dependency>
+          <dependency Id="3265c7d5-0720-45ed-bd2b-010f87a5edee">
+            <componentMoniker Id="8a9ce1cc-695d-4e88-aa0a-c461734e3bbc" LastKnownName="AllReady.cpp" />
+            <elementDefinition Id="437d109a-6565-4f56-81da-7ab84a9bbacb" />
+          </dependency>
+          <dependency Id="eed3f8e4-a1c9-4123-8d7c-5643880621aa">
+            <componentMoniker Id="f0951d38-d9e8-4920-8219-83455747b56f" LastKnownName="WorkWithClientMessage.cpp" />
+            <elementDefinition Id="66485465-547e-4134-9066-a2407111b516" />
+          </dependency>
+          <dependency Id="9e94d2b8-7298-4b84-9d9f-223b1430d21f">
+            <componentMoniker Id="e7d20436-8750-412c-aa63-a5296f1b1f68" LastKnownName="WinSockConnect.cpp" />
+            <elementDefinition Id="f3d8e670-c53b-4171-a0c5-7c39db72262f" />
+          </dependency>
+          <dependency Id="9280f37d-9e24-4a99-9d71-4b53aac92710">
+            <componentMoniker Id="f69be3a7-0b8b-42e8-909f-db29e1aa5efd" LastKnownName="WaitNewClients.cpp" />
+            <elementDefinition Id="ba17e6f2-e7fe-48f6-b351-d05a68295d0c" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="5a9229fb-e226-4582-af4f-4e44d78f1d82" name="StartServer.cpp" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="77fd6a73-5234-4cfc-9115-fbdff2ffa2e8" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="b92055a8-8836-406f-bd2b-42317fa5690d" name="Globals.cpp" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2caa88df-3dc5-4afa-8bdf-cad682af1774" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="8a9ce1cc-695d-4e88-aa0a-c461734e3bbc" name="AllReady.cpp" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="2bad0538-d736-4e5b-a034-ff780cc274d7" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="e7d20436-8750-412c-aa63-a5296f1b1f68" name="WinSockConnect.cpp" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="ecd89872-1cd4-45d5-b973-5651a7e3f053" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="f69be3a7-0b8b-42e8-909f-db29e1aa5efd" name="WaitNewClients.cpp" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="03651867-e193-4049-ae6c-935bdc6b4931" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="f0951d38-d9e8-4920-8219-83455747b56f" name="WorkWithClientMessage.cpp" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="a61d5eb4-930f-4b74-9504-b494b08ec375" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="ca770a5d-705f-4f6f-a82c-a5b00daefbcc" name="Main.h" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="b380408a-730d-4fd3-97e7-3c10a19fed36" />
+        <suppliersInternal>
+          <dependency Id="0dd03ae5-6449-4a86-9e85-6002153d6976">
+            <componentMoniker Id="8a9ce1cc-695d-4e88-aa0a-c461734e3bbc" LastKnownName="AllReady.cpp" />
+            <elementDefinition Id="8167edcc-ad40-42df-a248-213b779ca64a" />
+          </dependency>
+          <dependency Id="486aac67-ee9f-4bd4-a620-4f15e2d1af2a">
+            <componentMoniker Id="5a9229fb-e226-4582-af4f-4e44d78f1d82" LastKnownName="StartServer.cpp" />
+            <elementDefinition Id="19c429d7-2259-4682-ada7-d5d4ac7723a2" />
+          </dependency>
+          <dependency Id="44ac339b-aad9-4bd9-b036-1705f285a83d">
+            <componentMoniker Id="f69be3a7-0b8b-42e8-909f-db29e1aa5efd" LastKnownName="WaitNewClients.cpp" />
+            <elementDefinition Id="bfa13243-aecd-4511-9771-7cf2bcc73418" />
+          </dependency>
+          <dependency Id="4f6dff28-2e61-4747-8b0b-b4fa10311646">
+            <componentMoniker Id="f0951d38-d9e8-4920-8219-83455747b56f" LastKnownName="WorkWithClientMessage.cpp" />
+            <elementDefinition Id="c164cda2-7249-4c9f-aa07-332f9f9b27b0" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="5e38e3ee-ae53-413a-8f51-ce5d39c97cd6" name="Globals.h" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="996e4b89-2c7b-4af0-8e4f-4125641b2a6d" />
+        <suppliersInternal>
+          <dependency Id="a0261102-8109-4979-b970-aea4aac17eae">
+            <componentMoniker Id="5a9229fb-e226-4582-af4f-4e44d78f1d82" LastKnownName="StartServer.cpp" />
+            <elementDefinition Id="a3af82dd-d7e3-4ce6-ac7b-64c42ea8ce9b" />
+          </dependency>
+          <dependency Id="1b5ccd90-0920-46fe-9a9f-4d4846ac26e6">
+            <componentMoniker Id="8a9ce1cc-695d-4e88-aa0a-c461734e3bbc" LastKnownName="AllReady.cpp" />
+            <elementDefinition Id="8ed7292e-4cef-45a2-98e0-002ac29366bf" />
+          </dependency>
+          <dependency Id="1d4392eb-cc50-4dea-93aa-6093e43bbb25">
+            <componentMoniker Id="f0951d38-d9e8-4920-8219-83455747b56f" LastKnownName="WorkWithClientMessage.cpp" />
+            <elementDefinition Id="6301a0fe-1f4a-4c85-8fdc-235a74ce9177" />
+          </dependency>
+          <dependency Id="83c60c6c-9986-46fc-bb43-230932a5ee6f">
+            <componentMoniker Id="f69be3a7-0b8b-42e8-909f-db29e1aa5efd" LastKnownName="WaitNewClients.cpp" />
+            <elementDefinition Id="9f767a85-9afa-41b2-b710-f627af0bd41e" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+  </packagedElements>
+  <package Id="ec22faa1-49df-4395-92ac-196eb63aa8e2" name="ModelingProject1">
+    <elementDefinition Id="7003278a-3b0c-43fc-97c2-ae1d1a1c3ccf" />
+  </package>
+</componentModel>

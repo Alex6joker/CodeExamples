@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<logicalClassDesignerModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm10="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm11="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm12="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" dslVersion="1.0.0.0" Id="2ff1536b-cc5e-485f-ac5e-c8061187fbd0" name="UMLClassDiagram1" linkedPackageId="2c9f8dfe-b8ba-4ef1-9ee6-4d485722a9db" xmlns="http://schemas.microsoft.com/dsltools/LogicalClassDesigner">
+  <profileInstances>
+    <packageHasProfileInstances Id="a055201e-f0e1-4611-a496-a8b9efb7d38e">
+      <profileInstance Id="4de3d336-c8ed-43c5-b756-9306a7d7d7ee" name="StandardProfileL2">
+        <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+      </profileInstance>
+      <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+    </packageHasProfileInstances>
+    <packageHasProfileInstances Id="7002f723-b78d-4eeb-843f-ee57d83a2731">
+      <profileInstance Id="b2124e85-d830-40e5-b413-d727bce4ed5f" name="StandardProfileL3">
+        <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+      </profileInstance>
+      <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+    </packageHasProfileInstances>
+  </profileInstances>
+  <packagedElements>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="a01afba4-b740-4754-9fe2-b809d8dcb8cd" name="Form1" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="034206db-1a5e-484d-a796-b3dad84819fe" />
+        <suppliersInternal>
+          <dependency Id="c188b202-4af0-47b7-952a-513ea63ca69b">
+            <classMoniker Id="b92748b1-0158-40e1-92ab-cd0ccf9fc1ef" LastKnownName="Socket" />
+            <elementDefinition Id="49054c24-db1f-4a9b-b87a-3d4481160521" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="625927db-8f04-4bdd-97c5-c9e1c3896ad7" isSubstitutable="false">
+            <classMoniker Id="0d2d0462-e66a-4907-a558-222f3cd47daf" LastKnownName="Form" />
+            <elementDefinition Id="a94ac673-76fc-4281-a3c3-b1ac6a0f172d" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="96d3d31e-b593-435e-a1fc-2a8f56b6a292" name="ClientSocket" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="d27898a0-1eb3-4048-b81f-ff1a4b8d3ba0" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="492a5e96-018f-496e-b6cf-3b87162c8748" name="button1_Click" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="9a27cae2-b66d-4562-abe5-fe25ff5f2d21" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="c01f3cbf-d929-4a60-9c8b-713f9c8c812e" name="Form2" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="388372d4-139b-40ab-8323-e58faf341377" />
+        <suppliersInternal>
+          <dependency Id="e5eda3dd-9b28-4b52-ab37-f79652b27dd7">
+            <classMoniker Id="21b068d0-0843-451c-8ca8-93a69f40eb15" LastKnownName="Encoding" />
+            <elementDefinition Id="38327e26-8390-4e3c-a10a-dc9c8ba8f99a" />
+          </dependency>
+        </suppliersInternal>
+        <generalsInternal>
+          <generalization Id="44806ba4-e0bb-44ad-b570-2d8af345cbc6" isSubstitutable="false">
+            <classMoniker Id="0d2d0462-e66a-4907-a558-222f3cd47daf" LastKnownName="Form" />
+            <elementDefinition Id="9d40f32b-89c0-4d46-a671-f0e51925ff63" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="1fcd4a25-bdc0-4cff-abc4-ac0d1c054c4a" name="DEFAULT_BUFFER" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="2211c3f3-0796-4792-806d-26ad93b1007c" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="7155bb2f-6b2c-4b4d-b0ab-7274ff0b594d" name="button1_Click" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="adb2443e-e13d-495a-9693-7ce643884b6e" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="3e43dba1-3dd2-4923-bcb0-3ff0371571a2" name="Form3" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="0e5c0714-9beb-4db9-9cb6-64c54e267ce2" />
+        <generalsInternal>
+          <generalization Id="85edf407-b6d7-4366-9b16-40ee5a4590a9" isSubstitutable="false">
+            <classMoniker Id="0d2d0462-e66a-4907-a558-222f3cd47daf" LastKnownName="Form" />
+            <elementDefinition Id="39e85fec-2a41-462f-99aa-1eed1e678e4e" />
+          </generalization>
+        </generalsInternal>
+        <ownedAttributesInternal>
+          <property Id="75dfb691-fd2b-458f-808d-1916180cd852" name="img" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="7bb93520-2816-4930-b01e-d30f27261171" />
+          </property>
+          <property Id="eb9480bd-35fc-493c-89f8-148c06de0722" name="TargetsCount" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="0a0f9d2d-6ebc-4014-941c-8f8aa458ecb5" />
+          </property>
+          <property Id="34ed5958-2789-43e4-a26b-ced26d1771c2" name="Coordinates" isLeaf="false" isStatic="false" isReadOnly="false" isUnique="false" isDerived="false" isDerivedUnion="false" aggregation="None" isComposite="false">
+            <elementDefinition Id="b189b697-1ff7-49b9-a7ee-67b30d58bb9a" />
+          </property>
+        </ownedAttributesInternal>
+        <ownedOperationsInternal>
+          <operation Id="d1694d07-fe9d-4db8-a1a5-4bd13af1783a" name="pictureBox1_Click" isLeaf="false" isStatic="false" isAbstract="false" concurrency="Sequential" isQuery="false">
+            <elementDefinition Id="7604f9be-2392-4e96-8583-68baee435b4d" />
+          </operation>
+        </ownedOperationsInternal>
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="0d2d0462-e66a-4907-a558-222f3cd47daf" name="Form" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="3c3ad079-37f0-45e8-9bc1-9b375d38b647" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="b92748b1-0158-40e1-92ab-cd0ccf9fc1ef" name="Socket" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="32ed3638-ad81-41c0-b3d0-351b70f428ee" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+    <logicalClassDesignerModelHasTypes>
+      <class Id="21b068d0-0843-451c-8ca8-93a69f40eb15" name="Encoding" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c8dbb9d5-7b1e-4f9e-94b4-d8d0b9aaf8d1" />
+      </class>
+    </logicalClassDesignerModelHasTypes>
+  </packagedElements>
+  <package Id="2c9f8dfe-b8ba-4ef1-9ee6-4d485722a9db" name="ModelingProject1">
+    <elementDefinition Id="7003278a-3b0c-43fc-97c2-ae1d1a1c3ccf" />
+  </package>
+</logicalClassDesignerModel>
