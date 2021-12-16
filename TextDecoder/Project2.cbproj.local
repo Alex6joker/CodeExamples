@@ -1,0 +1,12 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.280,C:\Users\ALEX\Documents\RAD Studio\Projects\Project2.cbproj=E:\Учеба\3 курс\ЗИ\Расшифровка текста\Project2.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.530,=E:\Учеба\3 курс\ЗИ\Расшифровка текста\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.263,C:\Users\ALEX\Documents\RAD Studio\Projects\Unit1.dfm=E:\Учеба\3 курс\ЗИ\Расшифровка текста\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.736,=C:\Users\ALEX\Documents\RAD Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.725,=C:\Users\ALEX\Documents\RAD Studio\Projects\Project2.res</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.263,C:\Users\ALEX\Documents\RAD Studio\Projects\Unit1.h=E:\Учеба\3 курс\ЗИ\Расшифровка текста\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.263,C:\Users\ALEX\Documents\RAD Studio\Projects\Unit1.cpp=E:\Учеба\3 курс\ЗИ\Расшифровка текста\Unit1.cpp</Transaction>
+  </Transactions>
+</BorlandProject>
