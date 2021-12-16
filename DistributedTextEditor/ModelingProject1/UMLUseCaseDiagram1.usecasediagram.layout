@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="UMLUseCaseDiagram1">
+  <useCaseModelRootMoniker Id="3be8569c-f4a2-4811-be9e-aad7815b43df" />
+  <nestedChildShapes>
+    <actorShape Id="e657ca9f-6707-4868-a62a-2f07694f761c" absoluteBounds="4.375, 2.375, 0.5, 0.5" isReference="false" heightOffset="0">
+      <actorMoniker Id="81074027-65e0-41b1-b3cb-93fbacae12a4" LastKnownName="Пользователь" />
+      <relativeChildShapes />
+    </actorShape>
+    <useCaseShape Id="900870e8-22d9-4a5f-b435-a52655574fd2" absoluteBounds="5.5, 2.125, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="d8f19df1-63a1-48d0-b390-9840c0f5fa88" LastKnownName="Выбор IP" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseDependencyConnector edgePoints="[(4.875 : 2.57954545454545); (5.53010328825578 : 2.46043576577168)]" fixedFrom="Caller" fixedTo="Caller" customColor="Black">
+      <dependencyMoniker Id="d0c40367-83c4-402e-a432-0c938e4d76c9" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="e657ca9f-6707-4868-a62a-2f07694f761c" />
+        <useCaseShapeMoniker Id="900870e8-22d9-4a5f-b435-a52655574fd2" />
+      </nodes>
+    </useCaseDependencyConnector>
+    <useCaseShape Id="95bd9ac4-50c1-49d5-8aeb-1c85f4be7029" absoluteBounds="5.375, 3, 1, 0.75" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="c641d0d4-75e3-413d-b4ab-f977d41d4086" LastKnownName="Работа с общим файлом" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseDependencyConnector edgePoints="[(4.875 : 2.775); (5.48456559527849 : 3.14073935716709)]" fixedFrom="Caller" fixedTo="Caller" customColor="Black">
+      <dependencyMoniker Id="994a0335-5c2a-4baf-aa9f-1818731d042c" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="e657ca9f-6707-4868-a62a-2f07694f761c" />
+        <useCaseShapeMoniker Id="95bd9ac4-50c1-49d5-8aeb-1c85f4be7029" />
+      </nodes>
+    </useCaseDependencyConnector>
+    <useCaseShape Id="309383fa-c01b-4550-8afa-2c03833d38ea" absoluteBounds="5.375, 1.375, 1, 0.5" customColor="238, 237, 131" heightOffset="0">
+      <useCaseMoniker Id="4e659c2a-47c6-4528-a282-07e5584d7df0" LastKnownName="Выбор сервера" />
+      <relativeChildShapes />
+    </useCaseShape>
+    <useCaseDependencyConnector edgePoints="[(4.875 : 2.425); (5.61000052999841 : 1.83699957600127)]" fixedFrom="Caller" fixedTo="Caller" customColor="Black">
+      <dependencyMoniker Id="23b6da5c-92ad-45d4-a9a9-aecd140df0fd" />
+      <relativeChildShapes />
+      <nodes>
+        <actorShapeMoniker Id="e657ca9f-6707-4868-a62a-2f07694f761c" />
+        <useCaseShapeMoniker Id="309383fa-c01b-4550-8afa-2c03833d38ea" />
+      </nodes>
+    </useCaseDependencyConnector>
+  </nestedChildShapes>
+</useCaseDiagram>

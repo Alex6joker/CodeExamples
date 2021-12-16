@@ -1,0 +1,171 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<componentModel xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/dsltools/UseCaseModel" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" dslVersion="1.0.0.0" Id="1789a0d7-b0a2-4328-9d02-8b2539327b22" name="UMLComponentDiagram1" linkedPackageId="78c709a1-4504-445c-9037-929908a0c69f" xmlns="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner">
+  <packagedElements>
+    <componentModelHasComponents>
+      <component Id="0e6aef93-a6b7-4ac9-a1e5-f71ad50aa9fa" name="main" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="9ebb8a90-0b32-4011-bf68-b5258e06ba7f" />
+        <suppliersInternal>
+          <dependency Id="68146cbc-c38f-4af2-aba0-ee9c1a68b37e" name="&amp;num_of_IPs">
+            <componentMoniker Id="caac2c27-b523-4dea-9fbc-1c25e568c568" LastKnownName="GetArpTable" />
+            <elementDefinition Id="2802f9f8-0469-4e9a-a83c-20da830e5dd2" />
+          </dependency>
+          <dependency Id="444d764e-2524-4db9-af3d-e6693ab02cbb">
+            <componentMoniker Id="71045027-d3af-4878-be6b-e3dd148f8259" LastKnownName="SendTokenToTokenRing" />
+            <elementDefinition Id="0753cf70-9951-4ece-8729-f770888e778d" />
+          </dependency>
+          <dependency Id="84d166c8-285e-45f1-9397-5975b9499e2e">
+            <componentMoniker Id="e92fca06-3311-4a43-9e72-e884f8ebf7af" LastKnownName="DocumentWork" />
+            <elementDefinition Id="ca9221a2-dc54-4451-9901-0255326e0b7e" />
+          </dependency>
+          <dependency Id="5e5a470c-c3c5-426c-8671-808dc900bbe8">
+            <componentMoniker Id="6a9061c1-581b-4cb9-a80b-c8e88e93d29b" LastKnownName="WaitNewClieints" />
+            <elementDefinition Id="03d327f9-0db6-4ee2-a59c-42a9972da6cc" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="5165a4bc-ee1f-4c28-be6f-54d5ede94e7c" name="Make_New_File" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="06e39e6b-6f77-4cd1-9275-247bbc62fe63" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="23120986-be29-47c5-b837-321c19df523a" name="Remake_Text" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="1c588720-8faf-4d1e-9047-28329de81404" />
+        <suppliersInternal>
+          <dependency Id="6409bb73-4c50-4d38-ba4f-f09cd9278ede" name="FileBuffer">
+            <componentMoniker Id="e3f6b386-6ed9-4a03-8d54-a6eec739c502" LastKnownName="WorkWithClientMessage" />
+            <elementDefinition Id="bbd3b089-cd11-4cc8-adf9-9bf2d9b815ac" />
+          </dependency>
+          <dependency Id="f44485e1-4047-4554-95b1-fd33c9bb7df9" name="FileBuffer">
+            <componentMoniker Id="e92fca06-3311-4a43-9e72-e884f8ebf7af" LastKnownName="DocumentWork" />
+            <elementDefinition Id="85b98773-b1a3-4516-91b7-8d1f2ac912eb" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="64fc1b7d-48fe-488e-be3a-fdea712e4da7" name="DELETE_Remake_Text" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="4b2295c9-7d69-4901-9df2-8ef83c388d44" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="71045027-d3af-4878-be6b-e3dd148f8259" name="SendTokenToTokenRing" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="96fd8e00-11d6-42f8-ba27-ba5b867ff97a" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="6a9061c1-581b-4cb9-a80b-c8e88e93d29b" name="WaitNewClieints" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="910627ea-006b-404f-a82e-85fb0878f2ed" />
+        <suppliersInternal>
+          <dependency Id="b0074a93-79ff-4c98-afc4-a3a5e5dd3aa9" name="Client">
+            <componentMoniker Id="e3f6b386-6ed9-4a03-8d54-a6eec739c502" LastKnownName="WorkWithClientMessage" />
+            <elementDefinition Id="192ad7e3-1380-47db-990c-2bd373f7c93e" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="1433cd83-e782-41ae-9abb-7f980f1c470d" name="Pressed_Func_Key" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="348e00b4-ed48-45e0-b7f8-e33dfcb27bf9" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="e3f6b386-6ed9-4a03-8d54-a6eec739c502" name="WorkWithClientMessage" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="6cb32306-0298-4c72-8c00-ce596339bf98" />
+        <suppliersInternal>
+          <dependency Id="cb6c5cdf-750a-4475-9e9f-d9228e82992d" name="AnalysingMsg[0]">
+            <componentMoniker Id="08971d77-3d72-4469-ba2b-de65e7c6834a" LastKnownName="BACKSPACE_Remake_Text" />
+            <elementDefinition Id="bfb11569-080d-4751-9514-f0cb0b491747" />
+          </dependency>
+          <dependency Id="68367f04-297c-463f-be95-b8b07655bbbb" name="AnalysingMsg[0]">
+            <componentMoniker Id="64fc1b7d-48fe-488e-be3a-fdea712e4da7" LastKnownName="DELETE_Remake_Text" />
+            <elementDefinition Id="664238a3-011d-4b69-90e3-c7cf4f1a1b6a" />
+          </dependency>
+          <dependency Id="93f1a478-df6c-44a5-81f6-d51efac762ad" name="AnalysingMsg[0], symbol">
+            <componentMoniker Id="23120986-be29-47c5-b837-321c19df523a" LastKnownName="Remake_Text" />
+            <elementDefinition Id="8f68004f-56ba-44ff-bd68-ad569f1412cd" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="caac2c27-b523-4dea-9fbc-1c25e568c568" name="GetArpTable" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="73bda7b0-ce1b-4af7-93e7-9f0750c01b4b" />
+        <suppliersInternal>
+          <dependency Id="e5949356-7065-4a2d-b278-9af9b572620c" name="PC_IP_in_LVS">
+            <componentMoniker Id="0e6aef93-a6b7-4ac9-a1e5-f71ad50aa9fa" LastKnownName="main" />
+            <elementDefinition Id="54e781e0-d76d-4ef9-9b93-5ad81eb5eadc" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="e92fca06-3311-4a43-9e72-e884f8ebf7af" name="DocumentWork" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="cc9d4cd7-ad19-4382-be8f-ed873f16633e" />
+        <suppliersInternal>
+          <dependency Id="e0ea6f5e-3e2e-4633-a65d-6c62b3497fe9" name="&amp;Input_Codes">
+            <componentMoniker Id="4c35ee19-326b-459f-8f81-d98515b2810b" LastKnownName="Get_The_Pressed_Key" />
+            <elementDefinition Id="86048cb4-9a25-485b-b1a5-0cf18bfaec15" />
+          </dependency>
+          <dependency Id="a4897d46-3589-4366-bcf9-7b78fda22392" name="&amp;Input_Codes">
+            <componentMoniker Id="1433cd83-e782-41ae-9abb-7f980f1c470d" LastKnownName="Pressed_Func_Key" />
+            <elementDefinition Id="d8f655bd-be01-4a64-b6ba-6797e6eccef8" />
+          </dependency>
+          <dependency Id="767fdbe6-a49a-481a-b342-67f35a2cce36" name="hFile, OvlFile">
+            <componentMoniker Id="7b99719e-3641-4f6e-afd0-92c694646d97" LastKnownName="Read_To_FileBuffer" />
+            <elementDefinition Id="bc0ecff7-275d-4682-addf-b6c26d0267d8" />
+          </dependency>
+          <dependency Id="3f979781-052a-407b-ad55-701dbf19a585" name="hFile, OvlFile">
+            <componentMoniker Id="5165a4bc-ee1f-4c28-be6f-54d5ede94e7c" LastKnownName="Make_New_File" />
+            <elementDefinition Id="2fe1ecc1-397f-4f59-be3d-79b8d8864038" />
+          </dependency>
+          <dependency Id="e3183f83-2dd9-4dcf-b8ae-553c0c457fe9" name="Position, symbol">
+            <componentMoniker Id="23120986-be29-47c5-b837-321c19df523a" LastKnownName="Remake_Text" />
+            <elementDefinition Id="4cd4a63d-6de7-4a39-87cc-faa2846d0cdc" />
+          </dependency>
+          <dependency Id="aa687fe2-dbdc-41d2-a79f-15def732ebc7" name="Position">
+            <componentMoniker Id="64fc1b7d-48fe-488e-be3a-fdea712e4da7" LastKnownName="DELETE_Remake_Text" />
+            <elementDefinition Id="f69438dd-1f89-4520-ad67-b5356f959401" />
+          </dependency>
+          <dependency Id="9484a97f-097a-4c42-9e10-deb7e9a0ce9b" name="Position">
+            <componentMoniker Id="08971d77-3d72-4469-ba2b-de65e7c6834a" LastKnownName="BACKSPACE_Remake_Text" />
+            <elementDefinition Id="9395621a-f35e-481c-81c3-3a5d3d7ec06d" />
+          </dependency>
+        </suppliersInternal>
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="08971d77-3d72-4469-ba2b-de65e7c6834a" name="BACKSPACE_Remake_Text" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="28575892-fc47-49f4-9059-df2c6c41fcf4" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="4c35ee19-326b-459f-8f81-d98515b2810b" name="Get_The_Pressed_Key" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="f3cb52dd-af19-435f-9431-4cb49ef7ad42" />
+      </component>
+    </componentModelHasComponents>
+    <componentModelHasComponents>
+      <component Id="7b99719e-3641-4f6e-afd0-92c694646d97" name="Read_To_FileBuffer" isAbstract="false" isLeaf="false" isActiveClass="false">
+        <elementDefinition Id="c71f95e5-fd99-45c7-89ca-8b217e8eea23" />
+      </component>
+    </componentModelHasComponents>
+  </packagedElements>
+  <package Id="78c709a1-4504-445c-9037-929908a0c69f" name="ModelingProject1">
+    <elementDefinition Id="1454050a-2571-41ad-9b92-805f8ff81275" />
+    <profileInstances>
+      <packageHasProfileInstances Id="014bfe57-d319-4bca-8093-12ef51a3d76b">
+        <profileInstance Id="f0149389-d26f-44ed-95a6-d56be75db3e9" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="af400c1d-4bed-4e9e-810f-d0bd88fc34f0">
+        <profileInstance Id="0b61c5e1-fbea-44cb-ad5b-1ec2862c7e97" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</componentModel>

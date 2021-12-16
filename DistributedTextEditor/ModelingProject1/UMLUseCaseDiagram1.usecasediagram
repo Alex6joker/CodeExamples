@@ -1,0 +1,56 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<useCaseModelRoot xmlns:dm0="http://schemas.microsoft.com/VisualStudio/2008/DslTools/Core" xmlns:dm1="http://schemas.microsoft.com/dsltools/Kernel" xmlns:dm2="http://schemas.microsoft.com/dsltools/Component" xmlns:dm3="http://schemas.microsoft.com/dsltools/UseCase" xmlns:dm4="http://schemas.microsoft.com/dsltools/Activity" xmlns:dm5="http://schemas.microsoft.com/dsltools/Interaction" xmlns:dm6="http://schemas.microsoft.com/dsltools/UmlModelLibrary" xmlns:dm7="http://schemas.microsoft.com/dsltools/UmlDiagrams" xmlns:dm8="http://schemas.microsoft.com/dsltools/ModelStore" xmlns:dm9="http://schemas.microsoft.com/dsltools/SimpleShapesModel" xmlns:dm10="http://schemas.microsoft.com/VisualStudio/TeamArchitect/SequenceDesigner" xmlns:dm11="http://schemas.microsoft.com/VisualStudio/TeamArchitect/ComponentDesigner" dslVersion="1.0.0.0" Id="3be8569c-f4a2-4811-be9e-aad7815b43df" name="UMLUseCaseDiagram1" linkedPackageId="4f7a930b-b835-42b8-88d8-9095841f51a9" xmlns="http://schemas.microsoft.com/dsltools/UseCaseModel">
+  <packagedElements>
+    <useCaseModelRootHasTypes>
+      <actor Id="81074027-65e0-41b1-b3cb-93fbacae12a4" name="Пользователь" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="65b45eeb-ce33-4be4-b94e-e051ffaf602c" />
+        <suppliersInternal>
+          <dependency Id="d0c40367-83c4-402e-a432-0c938e4d76c9">
+            <useCaseMoniker Id="d8f19df1-63a1-48d0-b390-9840c0f5fa88" LastKnownName="Выбор IP" />
+            <elementDefinition Id="6aaf0510-b247-4b5d-8f7b-53c297c3a8ec" />
+          </dependency>
+          <dependency Id="994a0335-5c2a-4baf-aa9f-1818731d042c">
+            <useCaseMoniker Id="c641d0d4-75e3-413d-b4ab-f977d41d4086" LastKnownName="Работа с общим файлом" />
+            <elementDefinition Id="b426beb5-5b7c-4e12-8768-4de30bcf9dde" />
+          </dependency>
+          <dependency Id="23b6da5c-92ad-45d4-a9a9-aecd140df0fd">
+            <useCaseMoniker Id="4e659c2a-47c6-4528-a282-07e5584d7df0" LastKnownName="Выбор сервера" />
+            <elementDefinition Id="2e9c7614-9993-4df8-bc85-a75042bcdf6d" />
+          </dependency>
+        </suppliersInternal>
+      </actor>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="d8f19df1-63a1-48d0-b390-9840c0f5fa88" name="Выбор IP" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="c41edfd6-6a4f-4b8d-a9de-c26a9aa098aa" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="c641d0d4-75e3-413d-b4ab-f977d41d4086" name="Работа с общим файлом" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="57a31d7e-d20b-4224-95c7-4e6005bde987" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+    <useCaseModelRootHasTypes>
+      <useCase Id="4e659c2a-47c6-4528-a282-07e5584d7df0" name="Выбор сервера" isAbstract="false" isLeaf="false">
+        <elementDefinition Id="01f04017-64dc-42d9-af89-17bbf7178632" />
+      </useCase>
+    </useCaseModelRootHasTypes>
+  </packagedElements>
+  <package Id="4f7a930b-b835-42b8-88d8-9095841f51a9" name="ModelingProject1">
+    <elementDefinition Id="1454050a-2571-41ad-9b92-805f8ff81275" />
+    <profileInstances>
+      <packageHasProfileInstances Id="76b99134-7326-437d-9a59-9e9a6f36c7fb">
+        <profileInstance Id="f5e62417-6884-439c-94b3-b3536aaeff08" name="StandardProfileL2">
+          <elementDefinition Id="e34d544e-0fea-4ed6-ac5e-1b74119ac791" />
+        </profileInstance>
+        <elementDefinition Id="0caec977-1f8c-4ba3-a7db-8cc9ad9cc73b" />
+      </packageHasProfileInstances>
+      <packageHasProfileInstances Id="d83bd44f-14ad-4186-83e8-f1f70b64e2ef">
+        <profileInstance Id="d63d331e-ecad-4897-887d-15ecf93acc1c" name="StandardProfileL3">
+          <elementDefinition Id="532ea607-fb19-44b8-8502-3351b05452be" />
+        </profileInstance>
+        <elementDefinition Id="29349502-908c-4fda-9054-c48619c59ed0" />
+      </packageHasProfileInstances>
+    </profileInstances>
+  </package>
+</useCaseModelRoot>
