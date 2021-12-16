@@ -1,0 +1,209 @@
+//---------------------------------------------------------------------------
+
+#include <vcl.h>
+#pragma hdrstop
+
+#include "Unit1.h"
+#include <stdio.h>
+#include <conio.h>
+//---------------------------------------------------------------------------
+#pragma package(smart_init)
+#pragma resource "*.dfm"
+TForm1 *Form1;
+struct schema
+{
+        int number;
+        int circuit;
+        schema* next;
+        schema* prev;
+}*head,*tail;
+int counter_input=0; //Нажатие на кнопку загрузки информации из файла
+char* probel = "        ";
+char* new_line = "\n";
+AnsiString FileName ="";
+char* MyFile;
+//---------------------------------------------------------------------------
+__fastcall TForm1::TForm1(TComponent* Owner)
+        : TForm(Owner)
+{
+}
+//---------------------------------------------------------------------------
+
+
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Button3Click(TObject *Sender)
+{
+
+	FILE* f0;
+        int i = 0; //  Флаг положения для перевода строки AnsiString в char
+        if(counter_input!=0) // Если уже был вызов функции
+        {
+                schema* temp;
+                while(head!=NULL) // Очистка выделенной ранее памяти
+                {
+                        temp=head;
+                        head=head->next;
+                        free(temp);
+                }
+        }
+        counter_input++;
+	head = NULL;
+	tail = NULL;
+        if(OpenDialog1->Execute())   // Вызов окна открытия файла, если был выбран файл - присвоить строке путь к файлу
+        {
+                FileName = OpenDialog1->FileName;
+        }
+        MyFile = FileName.c_str(); // Перевод Ansi в char* через функцию c_str()
+	f0 = fopen(MyFile,"r");
+        Memo1->Text="";
+        Memo4->Text="";
+        if(!f0)
+        {
+             Memo3->Text="Ошибка открытия файла";
+             return;
+        }
+        i = 0; // Слежка за fscanf
+	while(!feof(f0))
+	{
+		schema* next_element;
+		next_element = (struct schema*)malloc(sizeof(struct schema));
+		next_element->next=head;
+		next_element->prev=tail;
+		if (head) head->prev = next_element;
+		head=next_element;
+		if (!tail) tail=head;
+		i = fscanf(f0,"%d%d",&(next_element->number),&(next_element->circuit));
+                if(i!=2)    //  Если данные считываются с ошибкой, то очищаем память и уходим из функции
+                {
+                        schema* temp;
+                        while(head!=NULL) // Очистка выделенной ранее памяти
+                        {
+                                temp=head;
+                                head=head->next;
+                                free(temp);
+                        }
+                        Memo3->Text="Ошибка при считывании данных из файла";
+                        fclose(f0);
+                        return;
+                }
+	}
+	fclose(f0);
+        if ((tail!=NULL) && (head!=NULL)) // Если информация из файла успешно загружена
+        {
+                Memo3->Text="Данные из файла были успешно прочитаны";
+        }
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Button1Click(TObject *Sender)
+{
+        int z=0;
+        schema* temp = tail;
+        if(counter_input==0) // Если не было нажатия на кнопку загрузки данных
+        {
+                Memo4->Text="Не была произведена загрузка из файла";
+                return;
+        }
+        if (head==NULL)            //Если структура пуста
+        {
+               Memo4->Text="Считанная информация пуста";
+               return;
+        }
+        Memo4->Text="";
+        while(head!=NULL)
+        {
+            if((temp==tail) && (z==1)) break;
+            if((temp==tail) && (z==0)) z++;
+            Memo4->Lines->Text=Memo4->Lines->Text+tail->number+" ";
+            Memo4->Lines->Text=Memo4->Lines->Text+tail->circuit+new_line;
+            tail = tail->prev;
+        }
+}
+//---------------------------------------------------------------------------
+void __fastcall TForm1::Button2Click(TObject *Sender)
+{
+     Memo4->Text="";
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button5Click(TObject *Sender)
+{
+       Memo1->Text="";
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Button4Click(TObject *Sender)
+{
+	int i,j;
+        int mass[7][7];
+	int z = 0;    // Счетчик прохода по всей структуре
+        schema* tmp = head;
+	schema* tmp_tail = tail;
+        if(counter_input==0) // Если не было нажатия на кнопку загрузки данных
+        {
+                Memo1->Text="Не была произведена загрузка из файла";
+                return;
+        }
+        if(head==NULL)
+        {
+              Memo1->Lines->Text="Данные не были загружены";
+              return;
+        }
+        Memo1->Text="";
+	while(head!=NULL)
+	{
+		for(i=1;i<=7;i++)
+		{
+			for(j=1;j<=7;j++)
+			{
+				if ((i==tail->number) && (j==tail->circuit))
+				{
+					if((tail==tmp_tail) && (z!=0)) 
+					{
+						head = NULL;
+						break; 
+					}
+					if((tail==tmp_tail) && (z==0)) z++;
+					mass[i-1][j-1]=1;
+					tail = tail->prev;
+				}
+				if(mass[i-1][j-1]!=1) mass[i-1][j-1]=0;
+			}
+		}
+	}
+        Memo1->Lines->Text=Memo1->Lines->Text+new_line;
+	for(i=0;i<7;i++)                // Вывод
+	{
+                Memo1->Lines->Text=Memo1->Lines->Text+probel;
+		for(j=0;j<7;j++)
+                {
+                        Memo1->Lines->Text=Memo1->Lines->Text+mass[i][j]+probel;
+                }
+                Memo1->Lines->Text=Memo1->Lines->Text+new_line;
+	}
+        head=tmp;
+        tail=tmp_tail;
+}
+//---------------------------------------------------------------------------
+
+void __fastcall TForm1::Memo3Change(TObject *Sender)
+{
+        Memo3->Alignment=taCenter;
+}
+//---------------------------------------------------------------------------
+
+
+
+void __fastcall TForm1::Button6Click(TObject *Sender)
+{
+        schema* temp;
+        while(head!=NULL) // Очистка выделенной ранее памяти
+        {
+                temp=head;
+                head=head->next;
+                free(temp);
+        }
+        Form1->Close();
+}
+//---------------------------------------------------------------------------
+
+
