@@ -1,0 +1,5 @@
+SELECT [Name] as [Название мероприятия]
+	  ,[Date-Time] as [Дата проведения]
+      ,[Awards] as [Награды]
+      ,[The_approximate_number_of_viewers] as [Ожидаемое число зрителей]
+FROM dbo.[Event]

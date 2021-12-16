@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<BorlandProject>
+	<Transactions>
+    <Transaction>1899.12.30 00:00:00.000.008,=C:\Users\Alex\Desktop\Курсовой БД\-- Project\Unit6.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.926,=C:\Users\Alex\Documents\RAD Studio\Projects\Project1.res</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.209,C:\Users\Alex\Desktop\Курсовой БД\-- Project\Unit1.h=C:\Users\Alex\Documents\RAD Studio\Projects\Unit1.h</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.209,C:\Users\Alex\Desktop\Курсовой БД\-- Project\Unit1.cpp=C:\Users\Alex\Documents\RAD Studio\Projects\Unit1.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.900,=C:\Users\Alex\Desktop\Курсовой БД\-- Project\Unit3.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.342,=C:\Users\Alex\Desktop\Курсовой БД\-- Project\Unit5.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.209,C:\Users\Alex\Desktop\Курсовой БД\-- Project\Unit1.dfm=C:\Users\Alex\Documents\RAD Studio\Projects\Unit1.dfm</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.569,C:\Users\Alex\Desktop\Курсовой БД\-- Project\Project1.cbproj=C:\Users\Alex\Documents\RAD Studio\Projects\Project1.cbproj</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.690,=C:\Users\Alex\Desktop\Курсовой БД\-- Project\Unit4.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.151,=C:\Users\Alex\Desktop\Курсовой БД\-- Project\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.578,=C:\Users\Alex\Desktop\Курсовой БД\-- Project\Unit2.cpp</Transaction>
+    <Transaction>1899.12.30 00:00:00.000.967,=C:\Users\Alex\Documents\RAD Studio\Projects\Unit1.cpp</Transaction>
+  </Transactions>
+</BorlandProject>
