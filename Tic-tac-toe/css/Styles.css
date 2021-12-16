@@ -1,0 +1,135 @@
+.Levels
+{
+    position: absolute; /* Абсолютное позиционирование */
+    bottom: 15px;
+    left: 15px;
+    line-height: 20px;
+    width: auto;
+    border: 3px;
+    border-style: double;
+    align-content: center;
+    color: coral;
+}
+.Level
+{
+    width: auto;
+    border: 3px;
+    border-style: double;
+    background-color: black;
+    text-align: center;
+    color: coral;
+}
+.Elements
+{
+    position: absolute; /* Абсолютное позиционирование */
+    top: 15px;
+    left: 15px;
+    line-height: 20px;
+    width: auto;
+    border: 2px;
+    border-style: solid;
+    align-content: center;
+    color: coral;
+}
+.Element
+{
+    width: auto;
+    border: 2px;
+    border-style: solid;
+    border-color: coral;
+    background-color: black;
+    text-align: center;
+    color: coral;
+}
+.GameName
+{
+    text-align: center;
+    font-family: serif;
+    font-weight: bold;
+    font-size: 30px;
+    color: coral;
+}
+.GameTimer
+{
+    position: absolute; /* Абсолютное позиционирование */
+    left: 48%;
+    text-align: center;
+    color: coral;
+    visibility: hidden;
+    font-family: serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: coral;
+}
+.GameStart
+{
+    position: absolute; /* Абсолютное позиционирование */
+    left: 48%;
+    border: 5px;
+    border-style: double;
+    text-align: center;
+    color: coral;
+    background-color: black;
+}
+.HighscoreTable
+{
+    position: absolute; /* Абсолютное позиционирование */
+    bottom: 45px;
+    right: 15px;
+    line-height: 30px;
+    width: auto;
+    border: 3px;
+    border-style: double;
+    align-content: center; 
+    color: coral;
+}
+.HighscoreTableName
+{
+    border: 5px;
+    border-style: solid;
+    text-align: center;
+    font-family: serif;
+    font-weight: bold;
+    font-size: 24px;
+    color: coral;
+    background-color: darkblue;
+}
+.HighscoreTableElement
+{
+    border: 3px;
+    border-style: solid;
+    align-content: center;
+    font-family: serif;
+    font-weight: bold;
+    font-size: 18px;
+    color: coral;
+    background-color: darkblue;
+}
+.DeleteCookies
+{
+    position: absolute; /* Абсолютное позиционирование */
+    bottom: 30px;
+    left: 48%;
+    border: 5px;
+    border-style: double;
+    text-align: center;
+    width: auto;
+    align-content: center;
+    color: coral;
+}
+.GameInfo
+{
+    text-align: center;
+    font-family: serif;
+    font-weight: bold;
+    font-size: 21px;
+    color: coral;
+}
+body
+{
+    background-image: url("../res/fon2.jpg");
+}
+.imgborders
+{
+    border: 4px green;
+}

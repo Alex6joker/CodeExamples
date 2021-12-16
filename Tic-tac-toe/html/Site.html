@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script type="text/javascript" src="../js/jquery-3.2.1.js"></script>
+<script type="text/javascript" src="../js/jquery.cookie.js"></script>
+<script type="text/javascript" src="../js/Game.js"></script>
+<script type="text/javascript" src="../js/timer.js"></script>
+<title> Лабораторная работа №3 - Крестики-нолики</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<link rel="stylesheet" href="../css/Styles.css" type="text/css"/>
+</head>
+
+<body>
+
+<div id = "GameName" class="GameName">
+   <p>Крестики-нолики</p>   
+</div>
+<div id = "Level" class="Levels">
+    <p>Сложность игры</p>
+    <div id = "Level_1" class="Level">
+        <p>3x3</p>
+    </div>
+    <div id = "Level_2" class="Level">
+        <p>4x4</p>
+    </div>   
+    <div id = "Level_3" class="Level">
+        <p>5x5</p>
+    </div>       
+</div>
+<div id = "Elements" class="Elements">
+    <p>Набор элементов</p>
+    <div id = "Elements_1" class="Element">
+        <p>Набор 1</p>
+    </div>
+    <div id = "Elements_2" class="Element">
+        <p>Набор 2</p>
+    </div>   
+</div>
+<div id = "NewGame" class="GameStart">
+    <p>Начать игру</p>    
+</div>
+<br><br><br>
+<div id = "GameTimerCluster" class="GameTimer">
+    <p id = "TimeText">Время игры</p>
+    <p id = "GameTimer"></p>
+</div>
+<br><br><br><br>
+<div id = "CurrentScore" class="GameInfo">  
+</div>
+<div id = "CurrentPlayer" class="GameInfo">  
+</div>
+<table id = "HighscoreTable" class="HighscoreTable">
+    <tr>
+        <td class="HighscoreTableName" colspan="3">Результаты</td>
+    </tr>
+</table>
+<div id = "DeleteCookies" class="DeleteCookies">
+    <p>Очистить cookie</p>
+</div>
+
+</body>
+</html>
