@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="PvZ.Buttons.Buttons">
+    <Position X="3.75" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AERAAACIAAQAgACgAAAAACAAAAAACAAABAAAABAAAIA=</HashCode>
+      <FileName>Buttons\Buttons.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PvZ.Game1">
+    <Position X="1.75" Y="2.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="PvZ.Game1.GameState" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Game1.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+      <Enum Name="PvZ.Game1.WinOrDefeatGameState" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Game1.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>gAUGEEAAgAAAAwAAAEAAEEAAAAUIAggEAAEBAAAABAQ=</HashCode>
+      <FileName>Game1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PvZ.Program" Collapsed="true">
+    <Position X="5.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAA=</HashCode>
+      <FileName>Program.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PvZ.Labels.Label" Collapsed="true">
+    <Position X="8.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAgAgAAAAAAAAAAAAAAAAQCAACAAAAAA=</HashCode>
+      <FileName>Labels\Label.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PvZ.ResultsTable.ResultsTable">
+    <Position X="3.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACQEAEAAAgAAAgAAACASAAgAQAIAAGACAAQBABQAAAA=</HashCode>
+      <FileName>ResultsTable\ResultsTable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PvZ.Timers.ReverseTimer" Collapsed="true">
+    <Position X="19" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Timers\ReverseTimer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PvZ.Timers.Timer" Collapsed="true">
+    <Position X="16.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Timers\Timer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PvZ.Timers.Timers" Collapsed="true">
+    <Position X="18" Y="3" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAEAAAAAAAgAgAAABAAAAAAAAAAAAAAAACAACQAA=</HashCode>
+      <FileName>Timers\Timers.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PvZ.GameMap">
+    <Position X="6" Y="4.25" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="PvZ.GameMap.SelectedPlant" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>GameMap.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAQAAAACAABAAhAEABAIASgAAAQAAQABSAAAAgQAABA=</HashCode>
+      <FileName>GameMap.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PvZ.Level">
+    <Position X="10.25" Y="2.75" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="PvZ.Level.SomeLevel" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Levels\Level.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AgQAAQAAAAAAQgAAACACAABABAAEABAFQBAAAAAAABA=</HashCode>
+      <FileName>Levels\Level.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PvZ.Cells">
+    <Position X="8.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQIAAAAAAAAAgAAAAAAQAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>Cells.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PvZ.BuyPlantsPanel">
+    <Position X="8.25" Y="2" Width="1.5" />
+    <NestedTypes>
+      <Struct Name="PvZ.BuyPlantsPanel.BuyingPlants" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>BuyPlantsPanel.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Struct>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AARAAgAJAAQAAgAAAAAAACBAAAAAAAAAQCAAAAAAgBA=</HashCode>
+      <FileName>BuyPlantsPanel.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PvZ.NPCs">
+    <Position X="12.25" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AASACACAAAgACgAgAAAAAARAACAARAAAAAAAgCAAgAI=</HashCode>
+      <FileName>NPC\NPCs.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PvZ.Plants" Collapsed="true">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAgAAAAAAQAAAAACAAAAAAAAAAA=</HashCode>
+      <FileName>NPC\Plants\Plants.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PvZ.Zombies" Collapsed="true">
+    <Position X="20" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEAAAgACAAACAAAAAAAAAhAAAgAAABAAAAAAEAIAI=</HashCode>
+      <FileName>NPC\Zombies\Zombies.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PvZ.PeaShooter" Collapsed="true">
+    <Position X="12.75" Y="2" Width="1.5" />
+    <InheritanceLine Type="PvZ.Plants" ManuallyRouted="true">
+      <Path>
+        <Point X="15.5" Y="1.191" />
+        <Point X="15.5" Y="2.013" />
+        <Point X="14.533" Y="2.013" Type="JumpStart" />
+        <Point X="14.367" Y="2.013" Type="JumpEnd" />
+        <Point X="13.5" Y="2.013" />
+        <Point X="13.5" Y="2" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAgAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NPC\Plants\PeaShooter.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PvZ.SunFlower" Collapsed="true">
+    <Position X="16.25" Y="2" Width="1.5" />
+    <InheritanceLine Type="PvZ.Plants" ManuallyRouted="true">
+      <Path>
+        <Point X="15.5" Y="1.191" />
+        <Point X="15.5" Y="2.017" />
+        <Point X="17" Y="2.017" />
+        <Point X="17" Y="2" />
+      </Path>
+    </InheritanceLine>
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAIAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAA=</HashCode>
+      <FileName>NPC\Plants\SunFlower.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PvZ.Zombie" Collapsed="true">
+    <Position X="20" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NPC\Zombies\Zombie.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="PvZ.ZombieCone" Collapsed="true">
+    <Position X="20" Y="2.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAAIAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>NPC\Zombies\ZombieCone.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
