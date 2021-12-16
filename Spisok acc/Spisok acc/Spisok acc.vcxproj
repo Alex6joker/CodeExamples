@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{60333564-D46A-4DF3-9E57-E3DAB8A69195}</ProjectGuid>
+    <RootNamespace>Spisokacc</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>12.0.30501.0</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Console</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="change_akk.c" />
+    <ClCompile Include="change_bemol.c" />
+    <ClCompile Include="change_diez.c" />
+    <ClCompile Include="chtenie_s_file_bemol.c" />
+    <ClCompile Include="chtenie_s_file_diez.c" />
+    <ClCompile Include="del_akk.c" />
+    <ClCompile Include="del_niz_bemol.c" />
+    <ClCompile Include="del_niz_diez.c" />
+    <ClCompile Include="del_opred_bemol.c" />
+    <ClCompile Include="del_opred_diez.c" />
+    <ClCompile Include="del_verx_bemol.c" />
+    <ClCompile Include="del_verx_diez.c" />
+    <ClCompile Include="files_size.c" />
+    <ClCompile Include="frequency.c" />
+    <ClCompile Include="gamma.c" />
+    <ClCompile Include="gl_menu_vybor.c" />
+    <ClCompile Include="listing.c" />
+    <ClCompile Include="listing_vybor.c" />
+    <ClCompile Include="main.c" />
+    <ClCompile Include="menu_vybor.c" />
+    <ClCompile Include="name.c" />
+    <ClCompile Include="osn_ton.c" />
+    <ClCompile Include="privetstvie.c" />
+    <ClCompile Include="Proverka_chisel.c" />
+    <ClCompile Include="proverka_file.c" />
+    <ClCompile Include="Proverka_slov.c" />
+    <ClCompile Include="prov_probel.c" />
+    <ClCompile Include="razr_name.c" />
+    <ClCompile Include="reset_files.c" />
+    <ClCompile Include="save_sort_bemol.c" />
+    <ClCompile Include="save_sort_diez.c" />
+    <ClCompile Include="sortirovka.c" />
+    <ClCompile Include="sort_bemol_frequency.c" />
+    <ClCompile Include="sort_bemol_stupen.c" />
+    <ClCompile Include="sort_diez_frequency.c" />
+    <ClCompile Include="sort_diez_stupen.c" />
+    <ClCompile Include="stupen.c" />
+    <ClCompile Include="tonal.c" />
+    <ClCompile Include="vvod_akk.c" />
+    <ClCompile Include="vvod_akk_end.c" />
+    <ClCompile Include="vvod_akk_start.c" />
+    <ClCompile Include="vvod_bemol.c" />
+    <ClCompile Include="vvod_diez.c" />
+    <ClCompile Include="vvod_empty_bemol.c" />
+    <ClCompile Include="vvod_empty_diez.c" />
+    <ClCompile Include="vyvod.c" />
+    <ClCompile Include="vyzov_bemol.c" />
+    <ClCompile Include="vyzov_diez.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="Change_akk.h" />
+    <ClInclude Include="Create_struct_header.h" />
+    <ClInclude Include="Del_akk.h" />
+    <ClInclude Include="Empty_file.h" />
+    <ClInclude Include="head.h" />
+    <ClInclude Include="Poisk_akk.h" />
+    <ClInclude Include="Sort_akk.h" />
+    <ClInclude Include="Vvod_akk.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
