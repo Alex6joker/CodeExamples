@@ -1,0 +1,29 @@
+<resources>
+    <string name="app_name">Lab5</string>
+    <string name="zero_button">0</string>
+    <string name="first_button">1</string>
+    <string name="second_button">2</string>
+    <string name="third_button">3</string>
+
+    <string name="dev_info">Информация о разработчиках</string>
+    <string name="dev_info_text">Матюнин А.Р.</string>
+
+    <string name="wrong_toast">Неправильно!</string>
+    <string name="right_toast">Правильно!</string>
+    <string name="prev_info">Назад</string>
+    <string name="next_info">Вперед</string>
+
+    <string name="target_info_text_1">Угадайте число от 0 до 3</string>
+    <string name="target_info_text_2">Нажмите на кнопку 1</string>
+    <string name="target_info_text_3">Нажмите на кнопку 3</string>
+
+    <string name="help_button_text">Помощь</string>
+    <string name="help_never_used">Помощь не была использована</string>
+    <string name="help_is_used">Помощь была использована</string>
+    <string name="help_activity_message">Помощь</string>
+    <string name="help_target_text_1">Нажимайте на кнопки "0", "1", "2", "3".\n
+        Если вы сразу не угадаете число, то ничего страшного.\n
+        У вас обязательно всё получится!</string>
+    <string name="help_target_text_2">Вам необходимо просто нажать на кнопку "1"</string>
+    <string name="help_target_text_3">Вам необходимо просто нажать на кнопку "3"</string>
+</resources>
